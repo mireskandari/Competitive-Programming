@@ -4785,6 +4785,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF64322198": {
+    "contest_id": 401,
+    "language": "GNU C++11",
+    "path": "codeforces/401/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Vanya and Cards",
+    "problem_url": "https://codeforces.com/contest/401/problem/A",
+    "submission_id": "CF64322198",
+    "submission_url": "https://codeforces.com/contest/401/submission/64322198",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Nov/05/2019 11:02"
+  },
   "CF64323749": {
     "contest_id": 450,
     "language": "GNU C++11",
