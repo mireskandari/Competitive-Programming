@@ -4785,6 +4785,22 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF64706156": {
+    "contest_id": 669,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/669/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Little Artem and Presents",
+    "problem_url": "https://codeforces.com/contest/669/problem/A",
+    "submission_id": "CF64706156",
+    "submission_url": "https://codeforces.com/contest/669/submission/64706156",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Nov/11/2019 11:37"
+  },
   "CF64903374": {
     "contest_id": 697,
     "language": "C++17 (GCC 7-32)",
