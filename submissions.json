@@ -4785,6 +4785,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF67001411": {
+    "contest_id": 69,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/69/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Young Physicist",
+    "problem_url": "https://codeforces.com/contest/69/problem/A",
+    "submission_id": "CF67001411",
+    "submission_url": "https://codeforces.com/contest/69/submission/67001411",
+    "tags": [
+      "implementation",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Dec/16/2019 00:56"
+  },
   "CF67001783": {
     "contest_id": 112,
     "language": "C++17 (GCC 7-32)",
