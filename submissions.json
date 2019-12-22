@@ -4785,6 +4785,22 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF67405311": {
+    "contest_id": 630,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/630/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Hexagons!",
+    "problem_url": "https://codeforces.com/contest/630/problem/D",
+    "submission_id": "CF67405311",
+    "submission_url": "https://codeforces.com/contest/630/submission/67405311",
+    "tags": [
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Dec/22/2019 01:07"
+  },
   "CF67442199": {
     "contest_id": 1277,
     "language": "C++17 (GCC 7-32)",
