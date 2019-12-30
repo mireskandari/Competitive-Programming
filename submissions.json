@@ -4785,6 +4785,22 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF67976761": {
+    "contest_id": 572,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/572/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Arrays",
+    "problem_url": "https://codeforces.com/contest/572/problem/A",
+    "submission_id": "CF67976761",
+    "submission_url": "https://codeforces.com/contest/572/submission/67976761",
+    "tags": [
+      "sortings",
+      "*900"
+    ],
+    "timestamp": "Dec/30/2019 12:15"
+  },
   "CF67977008": {
     "contest_id": 630,
     "language": "C++17 (GCC 7-32)",
