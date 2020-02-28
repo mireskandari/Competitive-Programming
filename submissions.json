@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF72037788": {
+    "contest_id": 1146,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1146/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Love \"A\"",
+    "problem_url": "https://codeforces.com/contest/1146/problem/A",
+    "submission_id": "CF72037788",
+    "submission_url": "https://codeforces.com/contest/1146/submission/72037788",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Feb/28/2020 08:15"
+  },
   "CF72038250": {
     "contest_id": 141,
     "language": "C++17 (GCC 7-32)",
