@@ -2419,6 +2419,26 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF73064197": {
+    "contest_id": 1324,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1324/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Frog Jumps",
+    "problem_url": "https://codeforces.com/contest/1324/problem/C",
+    "submission_id": "CF73064197",
+    "submission_url": "https://codeforces.com/contest/1324/submission/73064197",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dfs and similar",
+      "greedy",
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Mar/12/2020 10:23"
+  },
   "CF73153516": {
     "contest_id": 1324,
     "language": "C++17 (GCC 7-32)",
