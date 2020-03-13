@@ -5,40 +5,50 @@ typedef long long ll;
 #define all(v) v.begin(),v.end()
 #define X first
 #define Y second
-#define rep(x, y, z) for(ll (z) = (x); (z) < (y); (z)++)
+#define forn(x, y, z) for(ll (z) = (x); (z) < (y); (z)++)
 
-int constexpr N = 2 * 1e5;
+void debug_out() { cerr << '\n'; }
+template <typename Head, typename... Tail>
+void debug_out(Head H, Tail... T) {
+    cerr << H << ' ';
+    debug_out(T...);
+}
+
+int constexpr N = 2e5;
 int constexpr MOD = 1e9 + 7;
 int constexpr INF = 1e9;
-ll c1[N], c2[N], tmp[N], a[N], b[N];
-ll solve(int l, int r) {
-    if (r - l <= 1) return 0;
-    int m = (r + l) / 2;
-    ll res = solve(l, m) + solve(m, r);
-    int i = l, j = m;
-    while (i < m && j < r) {
-        if (c1[i] > c2[j]) {
-            j++;
-            res += m - i;
-        } else i++;
-    }
-    merge(c1 + l, c1 + m, c1 + m, c1 + r, tmp + l);
-    rep (l, r, x) c1[x] = tmp[x];
-    merge(c2 + l, c2 + m, c2 + m, c2 + r, tmp + l);
-    rep (l, r, x) c2[x] = tmp[x];
-    return res;
-}
+
+
+int a[N], b[N], c1[N], c2[N];
 int main() {
     ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 
     int n;
     cin >> n;
-    rep (0, n, i) cin >> a[i];
-    rep (0, n, i) cin >> b[i];
-    rep (0, n, i) {
+
+    forn (0, n, i) cin >> a[i];
+    forn (0, n, i) cin >> b[i];
+
+    ll cnteq = 0;
+    forn (0, n, i) {
         c1[i] = a[i] - b[i];
         c2[i] = -c1[i];
+        if (c1[i] > c2[i]) cnteq++;
     }
-    cout << solve(0, n);
+
+    sort(c1, c1 + n);
+    sort(c2, c2 + n);
+
+    ll cntgr = 0;
+    int i = 0, j = 0;
+    while (i < n && j < n) {
+        if (c1[i] > c2[j]) {
+            j++;
+            cntgr += n - i;
+        } else {
+            i++;
+        }
+    }
+    cout << (cntgr - cnteq) / 2;
     return 0;
 }
