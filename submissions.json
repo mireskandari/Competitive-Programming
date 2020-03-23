@@ -2419,6 +2419,25 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF74031271": {
+    "contest_id": 1312,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1312/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Two Regular Polygons",
+    "problem_url": "https://codeforces.com/contest/1312/problem/A",
+    "submission_id": "CF74031271",
+    "submission_url": "https://codeforces.com/contest/1312/submission/74031271",
+    "tags": [
+      "geometry",
+      "greedy",
+      "math",
+      "number theory",
+      "*800"
+    ],
+    "timestamp": "Mar/23/2020 07:06"
+  },
   "CF74032112": {
     "contest_id": 1312,
     "language": "C++17 (GCC 7-32)",
