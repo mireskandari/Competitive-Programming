@@ -32,9 +32,7 @@ struct Stack {
 	void pop() {
 		assert(size != 0);
 		size--;
-        Node<T>* p = top->p;
-		delete top;
-        top = p;
+		top = top->p;
 	}
 	
 	T get_top() {
