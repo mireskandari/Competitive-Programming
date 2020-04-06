@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF75686792": {
+    "contest_id": 1321,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1321/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Navigation System",
+    "problem_url": "https://codeforces.com/contest/1321/problem/D",
+    "submission_id": "CF75686792",
+    "submission_url": "https://codeforces.com/contest/1321/submission/75686792",
+    "tags": [
+      "graphs",
+      "shortest paths",
+      "*1700"
+    ],
+    "timestamp": "Apr/06/2020 14:38"
+  },
   "CF75731136": {
     "contest_id": 1321,
     "language": "C++17 (GCC 7-32)",
