@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF75645510": {
+    "contest_id": 1234,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1234/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Pipes",
+    "problem_url": "https://codeforces.com/contest/1234/problem/C",
+    "submission_id": "CF75645510",
+    "submission_url": "https://codeforces.com/contest/1234/submission/75645510",
+    "tags": [
+      "dp",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Apr/06/2020 06:23"
+  },
   "CF75646374": {
     "contest_id": 1234,
     "language": "C++17 (GCC 7-32)",
