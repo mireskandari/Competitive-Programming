@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF75736183": {
+    "contest_id": 1183,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1183/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Candy Box (easy version)",
+    "problem_url": "https://codeforces.com/contest/1183/problem/D",
+    "submission_id": "CF75736183",
+    "submission_url": "https://codeforces.com/contest/1183/submission/75736183",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Apr/07/2020 07:05"
+  },
   "CF75737000": {
     "contest_id": 1183,
     "language": "C++17 (GCC 7-32)",
