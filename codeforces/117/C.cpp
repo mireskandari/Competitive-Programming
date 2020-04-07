@@ -11,15 +11,14 @@ int constexpr N = 5 * 1e3;
 int constexpr MOD = 1e9 + 7;
 int constexpr INF = 1e9;
 
+vector<int> g[N];
+bool mark[N], adj[N][N];
+
 int main() {
     ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 
     int n;
     cin >> n;
-    vector<vector<int>> g(n);
-    vector<char> mark(n, false);
-    vector<vector<char>> adj(n, vector<char>(n, false));
-
     rep (0, n, i) {
         rep (0, n, j) {
             char c;
@@ -49,7 +48,7 @@ int main() {
         if (!mark[i]) {
             int v1, v2, v3;
             tie(v1, v2, v3) = dfs(i, -1);
-
+            
             if (v1 != -1) return cout << v1 + 1 << ' ' << v2 + 1 << ' ' << v3 + 1, 0;
         }
     }
