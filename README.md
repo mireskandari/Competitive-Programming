@@ -534,13 +534,13 @@ A repository to keep track of problem solving practice, containing solutions fro
 138 | [C - Two Teams Composing](https://codeforces.com/contest/1335/problem/C) | [C++17 (GCC 7-32)](./codeforces/1335/C.cpp) | `binary search` `greedy` `implementation` `sortings` `*1100` | Apr/14/2020 06:33 | 
 137 | [B - Construct the String](https://codeforces.com/contest/1335/problem/B) | [C++17 (GCC 7-32)](./codeforces/1335/B.cpp) | `constructive algorithms` `*900` | Apr/14/2020 06:17 | 
 136 | [A - Candies and Two Sisters](https://codeforces.com/contest/1335/problem/A) | [C++17 (GCC 7-32)](./codeforces/1335/A.cpp) | `math` `*800` | Apr/14/2020 06:10 | 
-135 | [A - Filling Diamonds](https://codeforces.com/contest/1339/problem/A) | [C++17 (GCC 7-32)](./codeforces/1339/A.cpp) | `brute force` `dp` `implementation` `math` `*900` | Apr/12/2020 10:14 | 
-134 | [C - Tile Painting](https://codeforces.com/contest/1243/problem/C) | [C++17 (GCC 7-32)](./codeforces/1243/C.cpp) | `number theory` `*1500` | Apr/12/2020 09:27 | 
-133 | [C - Air Conditioner](https://codeforces.com/contest/1304/problem/C) | [C++17 (GCC 7-32)](./codeforces/1304/C.cpp) | `dp` `greedy` `implementation` `sortings` `two pointers` `*1500` | Apr/12/2020 09:15 | 
-132 | [A - Two Rabbits](https://codeforces.com/contest/1304/problem/A) | [C++17 (GCC 7-32)](./codeforces/1304/A.cpp) | `math` `*800` | Apr/12/2020 08:33 | 
-131 | [B - Longest Palindrome](https://codeforces.com/contest/1304/problem/B) | [C++17 (GCC 7-32)](./codeforces/1304/B.cpp) | `brute force` `constructive algorithms` `greedy` `implementation` `strings` `*1100` | Apr/12/2020 08:32 | 
-130 | [A - Maximum Square](https://codeforces.com/contest/1243/problem/A) | [C++17 (GCC 7-32)](./codeforces/1243/A.cpp) | `implementation` `*800` | Apr/12/2020 06:19 | 
-129 | [D - Caesar's Legions](https://codeforces.com/contest/118/problem/D) | [C++17 (GCC 7-32)](./codeforces/118/D.cpp) | `dp` `*1700` | Apr/11/2020 14:18 | 
+135 | [D - Caesar's Legions](https://codeforces.com/contest/118/problem/D) | [C++17 (GCC 7-32)](./codeforces/118/D.cpp) | `dp` `*1700` | Apr/13/2020 14:12 | 
+134 | [A - Filling Diamonds](https://codeforces.com/contest/1339/problem/A) | [C++17 (GCC 7-32)](./codeforces/1339/A.cpp) | `brute force` `dp` `implementation` `math` `*900` | Apr/12/2020 10:14 | 
+133 | [C - Tile Painting](https://codeforces.com/contest/1243/problem/C) | [C++17 (GCC 7-32)](./codeforces/1243/C.cpp) | `number theory` `*1500` | Apr/12/2020 09:27 | 
+132 | [C - Air Conditioner](https://codeforces.com/contest/1304/problem/C) | [C++17 (GCC 7-32)](./codeforces/1304/C.cpp) | `dp` `greedy` `implementation` `sortings` `two pointers` `*1500` | Apr/12/2020 09:15 | 
+131 | [A - Two Rabbits](https://codeforces.com/contest/1304/problem/A) | [C++17 (GCC 7-32)](./codeforces/1304/A.cpp) | `math` `*800` | Apr/12/2020 08:33 | 
+130 | [B - Longest Palindrome](https://codeforces.com/contest/1304/problem/B) | [C++17 (GCC 7-32)](./codeforces/1304/B.cpp) | `brute force` `constructive algorithms` `greedy` `implementation` `strings` `*1100` | Apr/12/2020 08:32 | 
+129 | [A - Maximum Square](https://codeforces.com/contest/1243/problem/A) | [C++17 (GCC 7-32)](./codeforces/1243/A.cpp) | `implementation` `*800` | Apr/12/2020 06:19 | 
 128 | [D - Minimax Problem](https://codeforces.com/contest/1288/problem/D) | [C++17 (GCC 7-32)](./codeforces/1288/D.cpp) | `binary search` `bitmasks` `dp` `*2000` | Apr/10/2020 15:42 | 
 127 | [C - Primitive Primes](https://codeforces.com/contest/1316/problem/C) | [C++17 (GCC 7-32)](./codeforces/1316/C.cpp) | `constructive algorithms` `math` `ternary search` `*1800` | Apr/10/2020 02:40 | 
 126 | [B - String Modification](https://codeforces.com/contest/1316/problem/B) | [C++17 (GCC 7-32)](./codeforces/1316/B.cpp) | `brute force` `constructive algorithms` `implementation` `sortings` `strings` `*1400` | Apr/10/2020 02:20 | 
