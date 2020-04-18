@@ -1,26 +1,24 @@
 #include <bits/stdc++.h>
+using namespace std;
 
-int constexpr N = 1e5 + 10;
-int day[N], in[N];
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(0);
 
     int n;
-    scanf("%d", &n);
-    std::stack<int> st;
+    cin >> n;
+    vector<int> day(n, 0), in(n);
+    stack<int> st;
     for (int i = 0; i < n; i++) {
-        scanf("%d", &in[i]);
+        cin >> in[i];
         int mx = 1;
         while (!st.empty() && in[st.top()] < in[i]) {
-            mx = std::max(mx, day[st.top()] + 1);
+            mx = max(mx, day[st.top()] + 1);
             st.pop();
         }
         if (!st.empty()) day[i] = mx;
         st.push(i);
     }
-    int ans = 0;
-    for (int i = 0; i < n; i++) {
-        ans = std::max(ans, day[i]);
-    }
-    printf("%d", ans);
+    cout << *max_element(day.begin(), day.end());
     return 0;
 }
