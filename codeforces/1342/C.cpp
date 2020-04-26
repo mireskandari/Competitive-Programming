@@ -1,7 +1,3 @@
-#pragma GCC optimize("Ofast")
-#pragma GCC optimize ("unroll-loops")
-#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
-
 #include <bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -80,6 +76,7 @@ int main() {
                 Solve(l, r, b, cntb, i);
                 Solve(l, r, a * b / __gcd(a, b), cntab, i);
             }
+//            cerr << cnta << ' ' << cntb << ' ' << cntab << "\n\n\n\n";
             cout << -((r - l + 1) - cnta - cntb + cntab) << ' ';
         }
         cout << '\n';
