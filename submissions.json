@@ -2419,6 +2419,24 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF80004641": {
+    "contest_id": 1051,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1051/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Relatively Prime Pairs",
+    "problem_url": "https://codeforces.com/contest/1051/problem/B",
+    "submission_id": "CF80004641",
+    "submission_url": "https://codeforces.com/contest/1051/submission/80004641",
+    "tags": [
+      "greedy",
+      "math",
+      "number theory",
+      "*1000"
+    ],
+    "timestamp": "May/13/2020 13:07"
+  },
   "CF80005703": {
     "contest_id": 330,
     "language": "C++17 (GCC 7-32)",
