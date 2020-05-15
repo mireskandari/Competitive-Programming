@@ -2419,6 +2419,27 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF80245744": {
+    "contest_id": 1253,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1253/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Harmonious Graph",
+    "problem_url": "https://codeforces.com/contest/1253/problem/D",
+    "submission_id": "CF80245744",
+    "submission_url": "https://codeforces.com/contest/1253/submission/80245744",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "greedy",
+      "sortings",
+      "*1700"
+    ],
+    "timestamp": "May/15/2020 12:39"
+  },
   "CF80297837": {
     "contest_id": 1199,
     "language": "C++17 (GCC 7-32)",
