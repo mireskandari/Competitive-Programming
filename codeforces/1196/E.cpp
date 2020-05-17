@@ -79,9 +79,9 @@ int main() {
         if (b > 3 * w + 1 || w > 3 * b + 1) return cout << "NO\n", 0;
         cout << "YES\n";
         map<pair<int, int>, bool> mark;
-        static auto Col = [](int x, int y) { return (x & 1) == (y & 1); };
-        static auto Check = [](int x, int y) { return (x >= 0 && x < 1e9 && y >= 0 && y < 1e9); };
-        static auto Dfs = [&](auto& F, int vx, int vy) -> void {
+        auto Col = [](int x, int y) { return (x & 1) == (y & 1); };
+        auto Check = [](int x, int y) { return (x >= 0 && x < 1e9 && y >= 0 && y < 1e9); };
+        auto Dfs = [&](auto& F, int vx, int vy) -> void {
             mark[{vx, vy}] = true;
             if (Col(vx, vy) == 0) b--;
             else w--;
