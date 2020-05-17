@@ -2419,6 +2419,22 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF80525715": {
+    "contest_id": 1196,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1196/D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "RGB Substring (easy version)",
+    "problem_url": "https://codeforces.com/contest/1196/problem/D1",
+    "submission_id": "CF80525715",
+    "submission_url": "https://codeforces.com/contest/1196/submission/80525715",
+    "tags": [
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "May/17/2020 09:54"
+  },
   "CF80533323": {
     "contest_id": 1354,
     "language": "C++17 (GCC 7-32)",
