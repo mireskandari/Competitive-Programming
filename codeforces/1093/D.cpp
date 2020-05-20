@@ -115,7 +115,7 @@ int main() {
             g[--v].emplace_back(--u);
             g[u].emplace_back(v);
         }
-        auto Dfs = [&](auto& F, int v,
+        static auto Dfs = [&](auto& F, int v,
                 ll& a, ll& b) -> bool {
 
             (col[v] ? a : b)++;
