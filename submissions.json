@@ -2419,6 +2419,25 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF80881043": {
+    "contest_id": 1311,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1311/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Moving Points",
+    "problem_url": "https://codeforces.com/contest/1311/problem/F",
+    "submission_id": "CF80881043",
+    "submission_url": "https://codeforces.com/contest/1311/submission/80881043",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "implementation",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "May/21/2020 14:40"
+  },
   "CF80917351": {
     "contest_id": 742,
     "language": "C++17 (GCC 7-32)",
