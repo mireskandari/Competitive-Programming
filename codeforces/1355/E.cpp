@@ -1,7 +1,7 @@
-//#pragma GCC target("avx,avx2,fma")
-//#pragma GCC optimization ("Ofast")
-//#pragma GCC optimization ("unroll-loops")
-//#pragma GCC target ("sse4.2")
+#pragma GCC target("avx,avx2,fma")
+#pragma GCC optimization ("Ofast")
+#pragma GCC optimization ("unroll-loops")
+#pragma GCC target ("sse4.2")
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -72,7 +72,8 @@ template<int D, typename T>
 struct vec : public vector<vec<D - 1, T>> {
     template<typename... Args>
     vec(int n = 0, Args... args) :
-    vector<vec<D - 1, T>>(n, vec <D - 1, T>(args...)) {}
+    vector<vec<D - 1, T>>(n, vec <D - 1, T>
+    (args...)) {}
 };
 
 template<typename T>
