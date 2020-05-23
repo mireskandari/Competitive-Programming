@@ -11,7 +11,7 @@ typedef long long ll;
 /* <not-serious> */
 template<typename T>
 struct number_iterator :
-        iterator<forward_iterator_tag, T> {
+            iterator<forward_iterator_tag, T> {
 
     T v, step;
 
@@ -39,7 +39,7 @@ struct range : pair<T, T> {
 
     T _end(T begin, T end, T _step) {
         return _step > 0 ? max(begin, end) :
-               min(begin, end - 1);
+                           min(begin, end - 1);
     }
 
     using ptt = pair<T, T>;
@@ -118,8 +118,8 @@ int main() {
     }
     vector<char> mark(n, false), col(n);
     vector<int> d(n);
-    auto &&Dfs = [&](auto &&F, int v, int& r, int& l,
-                   vector<int>& c) {
+    auto Dfs = [&](auto& F, int v, int& r, int& l,
+                vector<int>& c) {
 
         mark[v] = true;
         c.emplace_back(v);
