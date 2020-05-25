@@ -2419,6 +2419,24 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF81364472": {
+    "contest_id": 999,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/999/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Equalize the Remainders",
+    "problem_url": "https://codeforces.com/contest/999/problem/D",
+    "submission_id": "CF81364472",
+    "submission_url": "https://codeforces.com/contest/999/submission/81364472",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "*1900"
+    ],
+    "timestamp": "May/25/2020 04:51"
+  },
   "CF81416051": {
     "contest_id": 577,
     "language": "C++17 (GCC 7-32)",
