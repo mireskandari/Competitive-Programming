@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF81556442": {
+    "contest_id": 1358,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1358/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Maria Breaks the Self-isolation",
+    "problem_url": "https://codeforces.com/contest/1358/problem/B",
+    "submission_id": "CF81556442",
+    "submission_url": "https://codeforces.com/contest/1358/submission/81556442",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "May/26/2020 14:38"
+  },
   "CF81604787": {
     "contest_id": 1358,
     "language": "C++17 (GCC 7-32)",
