@@ -12,7 +12,7 @@ typedef long long ll;
 /* <not-serious> */
 template<typename T>
 struct number_iterator :
-        iterator<forward_iterator_tag, T> {
+            iterator<forward_iterator_tag, T> {
     T v, step;
     number_iterator(T _v) : v(_v), step(1) {}
     number_iterator(T _v, T _step) : v(_v), step(_step) {}
@@ -32,7 +32,7 @@ struct range : pair<T, T> {
     T step;
     T _end(T begin, T end, T _step) {
         return _step > 0 ? max(begin, end) :
-               min(begin, end - 1);
+                           min(begin, end - 1);
     }
     using ptt = pair<T, T>;
     range(T begin, T end) : ptt(begin, max(begin, end)),
@@ -116,41 +116,30 @@ int main() {
     cin.tie(nullptr);
     ll n, x;
     cin >> n >> x;
-    vector<ll> a(2 * n);
+    vector<ll> a(n);
     for (auto i : range(n)) {
         cin >> a[i];
-        a[i + n] = a[i];
     }
-    reverse(all(a));
-    vector<ll> pref(2 * n);
-    vector<ll> sum(2 * n);
+    vector<ll> sum(n);
     auto Sum = [](ll n) {
         return (n + 1) * n / 2;
     };
-    for (auto i : range(2 * n)) {
-        pref[i] = a[i] + (i == 0 ? 0 : pref[i - 1]);
-        sum[i] = Sum(a[i]) + (i == 0 ? 0 : sum[i - 1]);
-    }
-//    cerr << pref << '\n';
-    ll mx = -INF;
+    int _i = 0;
+    generate(all(sum), [&]() {
+        return Sum(a[_i++]);
+    });
+    int j = 0;
+    ll days = 0, hug = 0, mx = -INF;
     for (auto i : range(n)) {
-        int p = upper_bound(all(pref), x + (i == 0 ? 0 : pref[i - 1])) -
-                pref.begin();
-//        cerr << x + (i == 0 ? 0 : pref[i - 1]) << ' ' << a[i] << ' ' << pref[i] << ' ' << p << ' ' << pref[p] - (i == 0 ? 0 : pref[i - 1]) << '\n';
-        ll ans, rmans;
-        if (p == i) {
-            ans = 0;
-            rmans = Sum(a[i]) - Sum(a[i] - x);
-        } else {
-            p--;
-            ll passed = pref[p] - (i == 0 ? 0 : pref[i - 1]);
-//            cerr << passed << ' ';
-            ans = sum[p] - (i == 0 ? 0 : sum[i - 1]);
-            p++;
-//            cerr << a[p] << '\n';
-            rmans = Sum(a[p]) - Sum(a[p] - x + passed);
+        while (days < x) {
+            days += a[j % n];
+            hug += sum[j % n];
+            j++;
         }
-        mx = max(ans + rmans, mx);
+        ll more = days - x;
+        mx = max(mx, hug - Sum(more));
+        hug -= sum[i];
+        days -= a[i];
     }
     cout << mx;
     return 0;
