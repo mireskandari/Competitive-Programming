@@ -2419,6 +2419,25 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF81699539": {
+    "contest_id": 1360,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1360/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Polygon",
+    "problem_url": "https://codeforces.com/contest/1360/problem/E",
+    "submission_id": "CF81699539",
+    "submission_url": "https://codeforces.com/contest/1360/submission/81699539",
+    "tags": [
+      "dp",
+      "graphs",
+      "implementation",
+      "shortest paths",
+      "*1300"
+    ],
+    "timestamp": "May/28/2020 07:25"
+  },
   "CF81850286": {
     "contest_id": 1360,
     "language": "C++17 (GCC 7-32)",
