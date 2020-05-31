@@ -2419,6 +2419,25 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF82036905": {
+    "contest_id": 1360,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1360/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "Binary Median",
+    "problem_url": "https://codeforces.com/contest/1360/problem/H",
+    "submission_id": "CF82036905",
+    "submission_url": "https://codeforces.com/contest/1360/submission/82036905",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "brute force",
+      "constructive algorithms",
+      "*2100"
+    ],
+    "timestamp": "May/31/2020 07:54"
+  },
   "CF82040037": {
     "contest_id": 1359,
     "language": "C++17 (GCC 7-32)",
