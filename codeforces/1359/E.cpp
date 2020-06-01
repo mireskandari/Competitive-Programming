@@ -182,32 +182,56 @@ struct Modular {
 //int& MOD = VarMod::value;
 //using Mint = Modular<VarMod>;
 
-int constexpr MOD =  998244353;
+int constexpr MOD = 998244353;
 using Mint = Modular<std::integral_constant<int, MOD>>;
 
 
 vector<Mint> fact;
+vector<Mint> invfact;
 
 inline void ffact(int n) {
-    fact.assign(n + 1, 1);
-    for (int i = 1; i <= n; i++) fact[i] = fact[i - 1] * i;
+    static int _prev = -1;
+    if (n <= _prev) return;
+    fact.resize(n + 1, 1);
+    for (int i = max(1, _prev + 1); i <= n; i++) fact[i] = fact[i - 1] * i;
+    _prev = n;
 }
 
+inline void finv(int n) {
+    static int _prev = -1;
+    if (n <= _prev) return;
+    ffact(n);
+    invfact.resize(n + 1, inverse(Mint(fact[n])));
+    for (int i = n; i >= max(1, _prev + 1); i--) invfact[i - 1] = invfact[i] * i;
+    _prev = n;
+}
 
-inline Mint nCrmod(int n, int r) { // call ffact and finv before
-    return fact[n] * inverse(fact[r] * fact[n - r]);
+inline void fcomb(int n) {
+    static int _prev = -1;
+    if (n <= _prev) return;
+    ffact(n);
+    finv(n);
+    _prev = n;
+}
+
+inline Mint nCrmod(int n, int r) {
+    if (r > n || r < 0) return 0;
+    fcomb(n);
+    return fact[n] * invfact[r] * invfact[n - r];
 }
 
 // real nCr;
-vector<vector<Mint>> nCr;
+using CombInt = Mint;
+vector<vector<CombInt>> nCr; // use with bound checking
 
-inline void fnCr(long long n) {
-    nCr.assign(n + 1, vector<Mint>(n + 1, 1));
-    for (int i = 1; i <= n; i++)
-        for (int j = 1; j <= n; j++)
-            nCr[i][j] = i >= j ?
-                    (i - 1 >= 0 && j - 1 >= 0 ? nCr[i - 1][j - 1] : 0) +
-                    (i - 1 >= 0 && i >= j && i - 1 >= j ? nCr[i - 1][j] : 0) : 0;
+inline void fnCr(int n) {
+    nCr.assign(n + 1, vector<CombInt>(n + 1, 0));
+    nCr[0][0] = 1;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j <= i; j++) {
+            nCr[i][j] = nCr[i - 1][j] + (j ? nCr[i - 1][j - 1] : 0);
+        }
+    }
 }
 
 ll constexpr INF = 1e18;
@@ -221,7 +245,6 @@ int main() {
         cout << 0;
         return 0;
     }
-    ffact(n + 1);
     Mint ans = 0;
     for (auto i : range(1, n + 1)) {
         int last = n - n % i;
