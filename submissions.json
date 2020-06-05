@@ -10111,6 +10111,25 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF82631884": {
+    "contest_id": 469,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/469/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Two Sets",
+    "problem_url": "https://codeforces.com/contest/469/problem/D",
+    "submission_id": "CF82631884",
+    "submission_url": "https://codeforces.com/contest/469/submission/82631884",
+    "tags": [
+      "2-sat",
+      "data structures",
+      "graph matchings",
+      "greedy",
+      "*2000"
+    ],
+    "timestamp": "Jun/05/2020 08:54"
+  },
   "CF82713278": {
     "contest_id": 1362,
     "language": "C++17 (GCC 7-32)",
