@@ -10111,6 +10111,22 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF82730507": {
+    "contest_id": 52,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/52/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "123-sequence",
+    "problem_url": "https://codeforces.com/contest/52/problem/A",
+    "submission_id": "CF82730507",
+    "submission_url": "https://codeforces.com/contest/52/submission/82730507",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jun/06/2020 14:29"
+  },
   "CF82730765": {
     "contest_id": 20,
     "language": "C++17 (GCC 7-32)",
