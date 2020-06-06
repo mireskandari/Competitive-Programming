@@ -10111,6 +10111,22 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF82730148": {
+    "contest_id": 1077,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1077/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Frog Jumping",
+    "problem_url": "https://codeforces.com/contest/1077/problem/A",
+    "submission_id": "CF82730148",
+    "submission_url": "https://codeforces.com/contest/1077/submission/82730148",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jun/06/2020 14:23"
+  },
   "CF82730328": {
     "contest_id": 1238,
     "language": "C++17 (GCC 7-32)",
