@@ -6341,6 +6341,25 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF83361898": {
+    "contest_id": 706,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/706/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Vasiliy's Multiset",
+    "problem_url": "https://codeforces.com/contest/706/problem/D",
+    "submission_id": "CF83361898",
+    "submission_url": "https://codeforces.com/contest/706/submission/83361898",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "data structures",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Jun/11/2020 04:18"
+  },
   "CF83363204": {
     "contest_id": 1285,
     "language": "C++17 (GCC 7-32)",
