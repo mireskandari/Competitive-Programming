@@ -42,7 +42,7 @@ struct vec<1, T> : public vector<T> {
 
 template<class Ch, class Tr, class Container>
 basic_ostream<Ch, Tr>& operator<<(basic_ostream<Ch, Tr> &os,
-                Container const &x) {
+                                  Container const &x) {
     os << "{ ";
     for (auto &y : x) os << y << " ";
     return os << "}";
@@ -68,7 +68,7 @@ struct Tp<Ch, Tr, Tuple, 0> {
 
 template<class Ch, class Tr, class... Args>
 basic_ostream<Ch, Tr>& operator<<(basic_ostream<Ch, Tr> &os,
-                tuple<Args...> const &t) {
+                                  tuple<Args...> const &t) {
     os << "[ ";
     Tp<Ch, Tr, tuple<Args...>, sizeof...(Args)>::print(os, t);
     return os << "]";
@@ -76,7 +76,8 @@ basic_ostream<Ch, Tr>& operator<<(basic_ostream<Ch, Tr> &os,
 
 ll const INF = 1e14;
 
-
+// So
+// FUCK LIFE.
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -95,21 +96,29 @@ int main() {
             }
         }
     }
-    vector<pair<int, int>> ready(N + 1, {-1, -1});
     vector<int> d1(n), d2(n);
+    vector<pair<int, int>> ready(N + 1, {-1, -1});
     rep (0, n, i) {
         if (ready[a[i]].X != -1) {
             tie(d1[i], d2[i]) = ready[a[i]];
             continue;
         }
-        int temp = a[i], firstd = 1;
+        set<int> pf;
+        int temp = a[i];
         while (a[i] > 1) {
-            firstd *= spf[a[i]];
-            int secondd = temp / firstd;
+            pf.emplace(spf[a[i]]);
             a[i] /= spf[a[i]];
-            if (firstd == 1 || secondd == 1) continue;
-            if (__gcd(firstd + secondd, temp) == 1) {
-                ready[temp] = {firstd, secondd};
+        }
+        vector<int> upf(all(pf));
+        int f = 1;
+        int s = 1;
+        rep (0, size(upf), j) s *= upf[j];
+        rep (0, size(upf), j) {
+            f *= upf[j];
+            s /= upf[j];
+            if (f == 1 || s == 1) break;
+            if (__gcd(f + s, temp) == 1) {
+                ready[temp] = {f, s};
                 tie(d1[i], d2[i]) = ready[temp];
                 break;
             }
