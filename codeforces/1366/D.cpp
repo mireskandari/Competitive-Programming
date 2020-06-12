@@ -102,18 +102,14 @@ int main() {
             tie(d1[i], d2[i]) = ready[a[i]];
             continue;
         }
-        int temp = a[i], f = 1;
-        int fspf = spf[a[i]];
-        if (fspf == a[i]) {
-            ready[a[i]] = {-1, -1};
-            tie(d1[i], d2[i]) = ready[a[i]];
-            continue;
-        }
-        while (!(a[i] % fspf)) {
-            a[i] /= fspf;
-            f *= fspf;
-            if (f != 1 && temp / f != 1 && __gcd(f + temp / f, temp) == 1) {
-                ready[temp] = {f, temp / f};
+        int temp = a[i], firstd = 1;
+        while (a[i] > 1) {
+            firstd *= spf[a[i]];
+            int secondd = temp / firstd;
+            a[i] /= spf[a[i]];
+            if (firstd == 1 || secondd == 1) continue;
+            if (__gcd(firstd + secondd, temp) == 1) {
+                ready[temp] = {firstd, secondd};
                 tie(d1[i], d2[i]) = ready[temp];
                 break;
             }
