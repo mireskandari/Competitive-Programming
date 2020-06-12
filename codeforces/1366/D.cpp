@@ -102,17 +102,21 @@ int main() {
             tie(d1[i], d2[i]) = ready[a[i]];
             continue;
         }
-        int temp = a[i];
+        int temp = a[i], f = 1;
         int fspf = spf[a[i]];
         if (fspf == a[i]) {
             ready[a[i]] = {-1, -1};
             tie(d1[i], d2[i]) = ready[a[i]];
             continue;
         }
-        while (a[i] % fspf == 0) a[i] /= fspf;
-        if (fspf != 1 && a[i] != 1 && __gcd<ll>(a[i] + fspf, temp) == 1) {
-            ready[temp] = {a[i], fspf};
-            tie(d1[i], d2[i]) = ready[temp];
+        while (!(a[i] % fspf)) {
+            a[i] /= fspf;
+            f *= fspf;
+            if (f != 1 && temp / f != 1 && __gcd(f + temp / f, temp) == 1) {
+                ready[temp] = {f, temp / f};
+                tie(d1[i], d2[i]) = ready[temp];
+                break;
+            }
         }
     }
     rep (0, n, i) cout << (d1[i] == 0 ? -1 : d1[i]) << ' ';
