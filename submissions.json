@@ -6341,6 +6341,22 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF84680719": {
+    "contest_id": 1234,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1234/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Special Permutations",
+    "problem_url": "https://codeforces.com/contest/1234/problem/E",
+    "submission_id": "CF84680719",
+    "submission_url": "https://codeforces.com/contest/1234/submission/84680719",
+    "tags": [
+      "math",
+      "*2000"
+    ],
+    "timestamp": "Jun/22/2020 11:58"
+  },
   "CF84790792": {
     "contest_id": 672,
     "language": "C++17 (GCC 7-32)",
