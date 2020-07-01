@@ -1,4 +1,3 @@
-#pragma GCC optimize ("O0")
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -23,6 +22,10 @@ template<int N, class T> void print_tuple(ostream &, T const &) {} template<int 
 // now start
 ll constexpr INF = 1e14;
 
+bool __attribute__((optimize("O0"))) check_overflow(ll a, ll p) {
+    return (a * p) / p == a;
+}
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -43,7 +46,7 @@ int main() {
         ll now = p;
         while (n / now > 0) {
             ans *= pow(Mint(p), n / now);
-            if ((now * p) / p != now) break;
+            if(!check_overflow(now, p)) break;
             now *= p;
         }
     }
