@@ -36,7 +36,18 @@ int main() {
   // maGiC
   V<PP<>> ans;
   int cost = 0;
-  for (int epoch = 0; epoch <= 100; epoch++) { // idontknowwhy:)
+  while (true) {
+    //  print_v(a);
+    
+    bool ok = true;
+    for (int i = 0; i < n; i++) {
+      if (i != dst[a[i]]) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) break;
+    
     for (int i = 1; i <= n; i++) {
       if (dst[i] > idx[i]) {
         for (int j = idx[i] + 1; j <= dst[i]; j++) {

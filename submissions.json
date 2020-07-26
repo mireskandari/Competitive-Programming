@@ -12020,6 +12020,24 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF88057148": {
+    "contest_id": 584,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/584/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Anton and Ira",
+    "problem_url": "https://codeforces.com/contest/584/problem/E",
+    "submission_id": "CF88057148",
+    "submission_url": "https://codeforces.com/contest/584/submission/88057148",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Jul/26/2020 09:04"
+  },
   "CF88072456": {
     "contest_id": 584,
     "language": "C++14 (GCC 6-32)",
