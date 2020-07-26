@@ -32,11 +32,15 @@ int main() {
     string a, b;
     cin >> a >> b;
     
+    VV<> has(20, V<>(20, false));
     bool ok = true;
     for (int i = 0; i < n; i++) {
       if (a[i] > b[i]) {
         ok = false;
         break;
+      }
+      if (a[i] != b[i]) {
+        has[a[i] - 'a'][b[i] - 'a'] = true;
       }
     }
     if (!ok) {
@@ -46,15 +50,15 @@ int main() {
     
     int ans = 0;
     for (int i = 0; i < 20; i++) {
-      char mn = CHAR_MAX;
-      for (int j = 0; j < n; j++) {
-        if (a[j] - 'a' != i || a[j] == b[j]) continue;
-        mn = min<char>(mn, b[j] - 'a');
-      }
-      if (mn == CHAR_MAX) continue;
-      ans++;
-      for (int j = 0; j < n; j++) {
-        if (a[j] - 'a' == i && a[j] != b[j]) a[j] = (char) (mn + 'a');
+      for (int j = 0; j < 20; j++) {
+        if (!has[i][j]) continue;
+        ans++;
+        for (int x = j + 1; x < 20; x++) {
+          if (has[i][x]) {
+            has[i][x] = false;
+            has[j][x] = true;
+          }
+        }
       }
     }
     
