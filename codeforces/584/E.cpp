@@ -48,7 +48,7 @@ int main(){
 			if(p[i] == q[j])
 				ans += abs(i - j), a[i] = j;
 	cout << ans / 2 << "\n";
-	for (int i = 0; i < 100000; i++) {
+	for (int i = 0; i < 10000; i++) {
     f();
   }
 	cout << SZ(sw) << "\n";
