@@ -19,72 +19,71 @@ template<class T> struct Nit { T _v, _s; Nit(T v, T s) : _v(v), _s(s) {} operato
 // now start
 ll constexpr INF = 1e14;
 
-int const dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
-
-int n, m;
-
-bool check(int x, int y) {
-  return x >= 0 && x < n && y >= 0 && y < m;
-}
-  
-void dfs(vector<string> &a, vec<2, char> &mark, vec<2, int> &ceach, int vx, int vy, int c, int &com) {
-  mark[vx][vy] = true;
-  ceach[vx][vy] = c;
-  com++;
-
-  for (auto i : range<>(4)) {
-    int nx = vx + dx[i], ny = vy + dy[i];
-    if (check(nx, ny) && a[nx][ny] == '.' && !mark[nx][ny]) {
-      dfs(a, mark, ceach, nx, ny, c, com);
-    }
-  }
-}
 
 int main() {
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cin >> n >> m;
-	vector<string> a(n);
-	for (auto &i : a) cin >> i;
-	
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  int n, m;
+  cin >> n >> m;
+  vector<string> a(n);
+  for (auto &i : a) cin >> i;
+  
+  int const dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
+  auto &&check = [&](int x, int y) {
+    return x >= 0 && x < n && y >= 0 && y < m;
+  };
 
-	vec<2, char> mark(n, m, false);
-	vec<2, int> ceach(n, m);
-	
-	vector<int> comp;
-	for (auto i : range<>(n)) {
-		for (auto j : range<>(m)) {
-			if (a[i][j] == '.' && !mark[i][j]) {
-				comp.emplace_back(0);
-				dfs(a, mark, ceach, i, j, (int) comp.size() - 1, comp.back());
-			}
-		}
-	}
-	cerr << comp << '\n';
-	vec<2, int> ans(n, m);
+  vec<2, char> mark(n, m, false);
+  vec<2, int> ceach(n, m);
 
-	for (auto i : range<>(n)) {
-		for (auto j : range<>(m)) {
-			if (a[i][j] == '*') {
-				set<int> adjc;
-				for (auto x : range<>(4)) {
-					int nx = i + dx[x], ny = j + dy[x];
-					if (check(nx, ny) && a[nx][ny] == '.') adjc.emplace(ceach[nx][ny]);
-				}
-				cerr << i << ' ' << j << ' ' << adjc << '\n';
-				int sz = 0;
-				for (auto &x : adjc) sz += comp[x];
-				ans[i][j] = sz;
-			}
-		}
-	}
+  function<void(int, int, int, int &)> dfs = [&](int vx, int vy, int c, int &com) {
+    mark[vx][vy] = true;
+    ceach[vx][vy] = c;
+    com++;
 
-	for (auto i : range<>(n)) {
-		for (auto j : range<>(m)) {
-			if (a[i][j] == '.') cout << '.';
-			else cout << (ans[i][j] + 1) % 10;
-		}
-		cout << '\n';
-	}
-	return 0;
+    for (auto i : range<>(4)) {
+      int nx = vx + dx[i], ny = vy + dy[i];
+      if (check(nx, ny) && a[nx][ny] == '.' && !mark[nx][ny]) {
+        dfs(nx, ny, c, com);
+      }
+    }
+  };
+  
+  vector<int> comp;
+  for (auto i : range<>(n)) {
+    for (auto j : range<>(m)) {
+      if (a[i][j] == '.' && !mark[i][j]) {
+        comp.emplace_back(0);
+        dfs(i, j, (int) comp.size() - 1, comp.back());
+      }
+    }
+  }
+  cerr << comp << '\n';
+  vec<2, int> ans(n, m);
+
+  for (auto i : range<>(n)) {
+    for (auto j : range<>(m)) {
+      if (a[i][j] == '*') {
+        set<int> adjc;
+        for (auto x : range<>(4)) {
+          int nx = i + dx[x], ny = j + dy[x];
+          if (check(nx, ny) && a[nx][ny] == '.') adjc.emplace(ceach[nx][ny]);
+        }
+        cerr << i << ' ' << j << ' ' << adjc << '\n';
+        int sz = 0;
+        for (auto &x : adjc) sz += comp[x];
+        ans[i][j] = sz;
+      }
+    }
+  }
+
+  for (auto i : range<>(n)) {
+    for (auto j : range<>(m)) {
+      if (a[i][j] == '.') cout << '.';
+      else cout << (ans[i][j] + 1) % 10;
+    }
+    cout << '\n';
+  }
+  return 0;
 }
+
