@@ -19,42 +19,44 @@ template<class T> struct Nit { T _v, _s; Nit(T v, T s) : _v(v), _s(s) {} operato
 // now start
 ll constexpr INF = 1e14;
 
+int const dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
+
+int n, m;
+
+bool check(int x, int y) {
+  return x >= 0 && x < n && y >= 0 && y < m;
+}
+  
+void dfs(vector<string> &a, vec<2, char> &mark, vec<2, int> &ceach, int vx, int vy, int c, int &com) {
+  mark[vx][vy] = true;
+  ceach[vx][vy] = c;
+  com++;
+
+  for (auto i : range<>(4)) {
+    int nx = vx + dx[i], ny = vy + dy[i];
+    if (check(nx, ny) && a[nx][ny] == '.' && !mark[nx][ny]) {
+      dfs(a, mark, ceach, nx, ny, c, com);
+    }
+  }
+}
 
 int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	int n, m;
 	cin >> n >> m;
 	vector<string> a(n);
 	for (auto &i : a) cin >> i;
 	
-	int const dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
-	auto &&check = [&](int x, int y) {
-		return x >= 0 && x < n && y >= 0 && y < m;
-	};
 
 	vec<2, char> mark(n, m, false);
 	vec<2, int> ceach(n, m);
-
-	auto &&dfs = [&](auto &f, int vx, int vy, int c, int &com) -> void {
-		mark[vx][vy] = true;
-		ceach[vx][vy] = c;
-		com++;
-
-		for (auto i : range<>(4)) {
-			int nx = vx + dx[i], ny = vy + dy[i];
-			if (check(nx, ny) && a[nx][ny] == '.' && !mark[nx][ny]) {
-				f(f, nx, ny, c, com);
-			}
-		}
-	};
 	
 	vector<int> comp;
 	for (auto i : range<>(n)) {
 		for (auto j : range<>(m)) {
 			if (a[i][j] == '.' && !mark[i][j]) {
 				comp.emplace_back(0);
-				dfs(dfs, i, j, (int) comp.size() - 1, comp.back());
+				dfs(a, mark, ceach, i, j, (int) comp.size() - 1, comp.back());
 			}
 		}
 	}
