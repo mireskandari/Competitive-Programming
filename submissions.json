@@ -12020,6 +12020,24 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF88849143": {
+    "contest_id": 553,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/553/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Kyoya and Colored Balls",
+    "problem_url": "https://codeforces.com/contest/553/problem/A",
+    "submission_id": "CF88849143",
+    "submission_url": "https://codeforces.com/contest/553/submission/88849143",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Aug/04/2020 03:15"
+  },
   "CF88853827": {
     "contest_id": 234,
     "language": "C++17 (GCC 7-32)",
