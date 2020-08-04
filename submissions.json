@@ -12020,6 +12020,22 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF88871641": {
+    "contest_id": 455,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/455/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Boredom",
+    "problem_url": "https://codeforces.com/contest/455/problem/A",
+    "submission_id": "CF88871641",
+    "submission_url": "https://codeforces.com/contest/455/submission/88871641",
+    "tags": [
+      "dp",
+      "*1500"
+    ],
+    "timestamp": "Aug/04/2020 08:54"
+  },
   "CF88882153": {
     "contest_id": 414,
     "language": "C++14 (GCC 6-32)",
