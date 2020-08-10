@@ -11202,6 +11202,23 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF89482594": {
+    "contest_id": 471,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/471/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "MUH and Important Things",
+    "problem_url": "https://codeforces.com/contest/471/problem/B",
+    "submission_id": "CF89482594",
+    "submission_url": "https://codeforces.com/contest/471/submission/89482594",
+    "tags": [
+      "implementation",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Aug/10/2020 01:40"
+  },
   "CF89483856": {
     "contest_id": 471,
     "language": "C++14 (GCC 6-32)",
