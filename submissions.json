@@ -11202,6 +11202,24 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF89519399": {
+    "contest_id": 448,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/448/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Painting Fence",
+    "problem_url": "https://codeforces.com/contest/448/problem/C",
+    "submission_id": "CF89519399",
+    "submission_url": "https://codeforces.com/contest/448/submission/89519399",
+    "tags": [
+      "divide and conquer",
+      "dp",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Aug/10/2020 10:47"
+  },
   "CF89521158": {
     "contest_id": 471,
     "language": "C++14 (GCC 6-32)",
