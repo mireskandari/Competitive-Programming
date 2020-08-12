@@ -26,13 +26,14 @@ int main() {
   }
   
   static int dp[N][800];
-  memset(dp, -1, sizeof(dp));
+  static bool mark[N][800];
 
   // was hard to fuck with when iterative
   function<int(int, int)> solve = [&](int i, int j) {
     int delta = j - d + 380;
     if (i >= N) return 0;
-    if (dp[i][delta] != -1) return dp[i][delta];
+    if (mark[i][delta]) return dp[i][delta];
+    mark[i][delta] = true;
 
     if (j != 1) {
       dp[i][delta] = max({solve(i + j + 1, j + 1), solve(i + j, j), solve(i + j - 1, j - 1)}) + has[i];
