@@ -23,11 +23,12 @@ int main() {
   // dp[v] : edges passing by the edge {v, P(v)}
   vc<int> dp(n), depth(n);
   vc<bool> mark(n);
-  auto dfs = [&](auto &f, int v) -> void {
+  function<void(int)> dfs = [&](int v) {
     mark[v] = true;
     for (auto &edge : g[v]) {
       int u = e[edge].first + e[edge].second - v;
       if (mark[u] && depth[u] < depth[v] - 1) {
+        cerr << v << ' ' << u << '\n';
         --dp[u]; ++dp[v];
         if (e[edge].first != v) swap(e[edge].first, e[edge].second);
       }
@@ -36,13 +37,13 @@ int main() {
       int u = e[edge].first + e[edge].second - v;
       if (!mark[u]) {
         depth[u] = depth[v] + 1;
-        f(f, u);
+        dfs(u);
         dp[v] += dp[u];
         if (e[edge].first != v) swap(e[edge].first, e[edge].second);
       }
     }
   };
-  dfs(dfs, 0);
+  dfs(0);
   for (int i = 1; i < n; ++i) {
     if (!dp[i]) {
       cout << 0;
