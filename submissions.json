@@ -11202,6 +11202,25 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF91512624": {
+    "contest_id": 402,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/402/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Upgrading Array",
+    "problem_url": "https://codeforces.com/contest/402/problem/D",
+    "submission_id": "CF91512624",
+    "submission_url": "https://codeforces.com/contest/402/submission/91512624",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "number theory",
+      "*1800"
+    ],
+    "timestamp": "Aug/31/2020 13:12"
+  },
   "CF91518316": {
     "contest_id": 1185,
     "language": "C++14 (GCC 6-32)",
