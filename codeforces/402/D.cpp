@@ -33,43 +33,55 @@ int main() {
     
     // moral of the story : always save duplicate answers
     map<int, int> save_ans;
-    
-    auto get_delta = [&](int a) {
-        int tmp = a;
-        if (!save_ans.count(a)) {
-            int delta = 0;
-            for (int64_t j = 2; j * j <= a; ++j) {
-                bool bad = is_bad[j];
-                while (a % j == 0) {
-                    a /= j;
-                    if (bad) --delta;
-                    else ++delta;
-                }
-            }
-            if (a > 1) {
-                if (is_bad[a]) --delta;
-                else ++delta;
-            }
-            save_ans[tmp] = delta;
-        }
-        return save_ans[tmp];
-    };
 
     int all_delta = 0;
     int last_delta = 0, last_div = 1;
     for (int i = n - 1; i >= 0; --i) {
         pref[i] /= last_div;
         all_delta += last_delta;
-        int delta = -get_delta(pref[i]);
+        int delta = 0, tmp = pref[i];
+        if (!save_ans.count(pref[i])) {
+            for (int64_t j = 2; j * j <= pref[i]; ++j) {
+                bool bad = is_bad[j];
+                while (pref[i] % j == 0) {
+                    pref[i] /= j;
+                    if (bad) ++delta;
+                    else --delta;
+                }
+            }
+            if (pref[i] > 1) {
+                if (is_bad[pref[i]]) ++delta;
+                else --delta;
+            }
+            save_ans[tmp] = -delta;
+        }
+        delta = -save_ans[tmp];
         if (delta > 0) {
             last_delta += delta;
-            last_div *= pref[i];
+            last_div *= tmp;
             all_delta += delta;
         }
     }
     
     for (int i = 0; i < n; ++i) {
-        all_delta += get_delta(a[i]);
+        int tmp = a[i];
+        if (!save_ans.count(a[i])) {
+            int delta = 0;
+            for (int64_t j = 2; j * j <= a[i]; ++j) {
+                bool bad = is_bad[j];
+                while (a[i] % j == 0) {
+                    a[i] /= j;
+                    if (bad) --delta;
+                    else ++delta;
+                }
+            }
+            if (a[i] > 1) {
+                if (is_bad[a[i]]) --delta;
+                else ++delta;
+            }
+            save_ans[tmp] = delta;
+        }
+        all_delta += save_ans[tmp];
     }
 
     cout << all_delta;
