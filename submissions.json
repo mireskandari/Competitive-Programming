@@ -11202,6 +11202,22 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF91491100": {
+    "contest_id": 383,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/383/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Antimatter",
+    "problem_url": "https://codeforces.com/contest/383/problem/D",
+    "submission_id": "CF91491100",
+    "submission_url": "https://codeforces.com/contest/383/submission/91491100",
+    "tags": [
+      "dp",
+      "*2300"
+    ],
+    "timestamp": "Aug/31/2020 08:43"
+  },
   "CF91499346": {
     "contest_id": 1221,
     "language": "C++14 (GCC 6-32)",
