@@ -11202,6 +11202,25 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF91962535": {
+    "contest_id": 1188,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/1188/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Count Pairs",
+    "problem_url": "https://codeforces.com/contest/1188/problem/B",
+    "submission_id": "CF91962535",
+    "submission_url": "https://codeforces.com/contest/1188/submission/91962535",
+    "tags": [
+      "math",
+      "matrices",
+      "number theory",
+      "two pointers",
+      "*2300"
+    ],
+    "timestamp": "Sep/05/2020 13:55"
+  },
   "CF91966736": {
     "contest_id": 710,
     "language": "C++14 (GCC 6-32)",
