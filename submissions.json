@@ -11202,6 +11202,22 @@
     ],
     "timestamp": "Jul/22/2020 03:52"
   },
+  "CF91960775": {
+    "contest_id": 710,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/710/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "King Moves",
+    "problem_url": "https://codeforces.com/contest/710/problem/A",
+    "submission_id": "CF91960775",
+    "submission_url": "https://codeforces.com/contest/710/submission/91960775",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Sep/05/2020 13:24"
+  },
   "CF91961154": {
     "contest_id": 710,
     "language": "C++14 (GCC 6-32)",
