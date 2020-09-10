@@ -3843,6 +3843,26 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF92443507": {
+    "contest_id": 1119,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/1119/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Pavel and Triangles",
+    "problem_url": "https://codeforces.com/contest/1119/problem/E",
+    "submission_id": "CF92443507",
+    "submission_url": "https://codeforces.com/contest/1119/submission/92443507",
+    "tags": [
+      "brute force",
+      "dp",
+      "fft",
+      "greedy",
+      "ternary search",
+      "*1900"
+    ],
+    "timestamp": "Sep/10/2020 12:07"
+  },
   "CF92451143": {
     "contest_id": 711,
     "language": "C++14 (GCC 6-32)",
