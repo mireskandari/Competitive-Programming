@@ -1,65 +1,57 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+namespace Util {
 #ifdef LOCAL
-#define dbg(a) cerr << "\"" << #a << "\"=" << a << '\n'
+#define dbg(a) cerr << __LINE__ << " \"" << #a << "\": " << a << '\n'
 #else
-#define dbg(a) 0
+#define dbg(a)
 #endif
-
-int n;
-vector<int> centroid, sz;
-vector<vector<int>> g;
-
-void dfs(int v, int p) {
-    sz[v] = 1;
-    bool cent = true;
-    for (auto &u : g[v]) {
-        if (u == p) continue;
-        dfs(u, v);
-        sz[v] += sz[u];
-        if (sz[u] > n / 2) cent = false;
-    }
-    if (n - sz[v] > n / 2) cent = false;
-    if (cent) centroid.emplace_back(v);
+#define all(v) (v).begin(), (v).end()
+using ll = long long;
 }
+using namespace Util;
 
-int find_leaf(int v, int p) {
-    for (auto &u : g[v]) {
-        if (u == p) continue;
-        int res = find_leaf(u, v);
-        if (res != -1) return res;
-    }
-    if (int(g[v].size()) == 1) return v;
-    return -1;
-}
 
 signed main() {
     ios::sync_with_stdio(false), cin.tie(nullptr);
     int tc;
     cin >> tc;
     while (tc--) {
+        int n;
         cin >> n;
-        centroid.clear();
-        g.assign(n, vector<int>());
-        sz.assign(n, 0);
+        vector<vector<int>> g(n);
         for (int i = 0; i < n - 1; ++i) {
             int v, u;
             cin >> v >> u;
             g[--v].emplace_back(--u);
             g[u].emplace_back(v);
         }
+        vector<int> centroid, sz(n);
+        function<void(int, int)> dfs = [&](int v, int p) {
+            bool c = true;
+            for (int &u : g[v]) {
+                if (u == p) continue;
+                dfs(u, v);
+                sz[v] += sz[u];
+                if (sz[u] > n / 2) c = false;
+            }
+            if (n - sz[v] - 1 > n / 2) c = false;
+            sz[v]++;
+            if (c) centroid.emplace_back(v);
+        };
         dfs(0, -1);
-        if (int(centroid.size()) == 1) {
+        dbg(centroid.size());
+        for (auto &i : sz) dbg(i);
+        if ((int) centroid.size() == 1) {
+            dbg(g[0].size());
             cout << 1 << ' ' << g[0][0] + 1 << '\n';
             cout << 1 << ' ' << g[0][0] + 1 << '\n';
             continue;
         }
         int v = centroid[0], u = centroid[1];
-        g[u].erase(find(g[u].begin(), g[u].end(), v));
-        g[v].erase(find(g[v].begin(), g[v].end(), u));
-        int l = find_leaf(u, -1);
-        cout << l + 1 << ' ' << g[l][0] + 1 << '\n';
-        cout << l + 1 << ' ' << v + 1 << '\n';
+        cout << u + 1 << ' ' << (g[u][0] == v ? g[u][1] : g[u][0]) + 1 << '\n';
+        cout << v + 1 << ' '<< (g[u][0] == v ? g[u][1] : g[u][0]) + 1 << '\n';
     }
     return 0;
 }
