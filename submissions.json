@@ -3843,6 +3843,23 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF92734794": {
+    "contest_id": 986,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/986/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Petr and Permutations",
+    "problem_url": "https://codeforces.com/contest/986/problem/B",
+    "submission_id": "CF92734794",
+    "submission_url": "https://codeforces.com/contest/986/submission/92734794",
+    "tags": [
+      "combinatorics",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Sep/13/2020 13:07"
+  },
   "CF92737382": {
     "contest_id": 986,
     "language": "C++14 (GCC 6-32)",
