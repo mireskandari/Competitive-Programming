@@ -3843,6 +3843,29 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF93050018": {
+    "contest_id": 1379,
+    "language": "C++14 (GCC 6-32)",
+    "path": "codeforces/1379/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Choosing flowers",
+    "problem_url": "https://codeforces.com/contest/1379/problem/C",
+    "submission_id": "CF93050018",
+    "submission_url": "https://codeforces.com/contest/1379/submission/93050018",
+    "tags": [
+      "binary search",
+      "brute force",
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "greedy",
+      "sortings",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Sep/17/2020 09:27"
+  },
   "CF93255218": {
     "contest_id": 305,
     "language": "C++14 (GCC 6-32)",
