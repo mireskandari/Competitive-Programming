@@ -3843,6 +3843,23 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF93948525": {
+    "contest_id": 30,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/30/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Accounting",
+    "problem_url": "https://codeforces.com/contest/30/problem/A",
+    "submission_id": "CF93948525",
+    "submission_url": "https://codeforces.com/contest/30/submission/93948525",
+    "tags": [
+      "brute force",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Sep/27/2020 06:53"
+  },
   "CF94022162": {
     "contest_id": 1417,
     "language": "C++17 (GCC 9-64)",
