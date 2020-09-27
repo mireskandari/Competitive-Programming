@@ -3843,6 +3843,24 @@
     ],
     "timestamp": "May/31/2020 08:44"
   },
+  "CF93943821": {
+    "contest_id": 1174,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1174/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Ehab Fails to Be Thanos",
+    "problem_url": "https://codeforces.com/contest/1174/problem/A",
+    "submission_id": "CF93943821",
+    "submission_url": "https://codeforces.com/contest/1174/submission/93943821",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Sep/27/2020 05:48"
+  },
   "CF93944684": {
     "contest_id": 1174,
     "language": "C++17 (GCC 9-64)",
