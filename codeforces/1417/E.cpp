@@ -47,27 +47,28 @@ int main() {
             if (!zero.empty()) new_seg.push_back(zero);
         }
         swap(seg, new_seg);
-    } 
-    vector<int> fen(n + 1);
-    auto Modify = [&](int idx, ll val) {
-        for (++idx; idx < n + 1; idx += idx & -idx) fen[idx] += val;
-    };
-    auto Get = [&](int idx) {
-        ll ret = 0;
-        for (++idx; idx > 0; idx -= idx & -idx) ret += fen[idx];
+    }
+    vector<int> temp(n);
+    auto Solve = [&](auto &slf, int l, int r) {
+        if (r - l <= 1) return 0ll;
+        int m = (l + r) >> 1;
+        ll ret = slf(slf, l, m);
+        ret += slf(slf, m, r);
+        int i = l, j = m, p = l;
+        while (i < m && j < r) {
+            if (a[i] > a[j]) {
+                temp[p++] = a[j++];
+                ret += m - i;
+            } else {
+                temp[p++] = a[i++];
+            }
+        }
+        while (i < m) temp[p++] = a[i++];
+        while (j < r) temp[p++] = a[j++];
+        for (int k = l; k < r; ++k)
+            a[k] = temp[k];
         return ret;
     };
-    {
-        vector<int> temp(begin(a), end(a));
-        sort(begin(temp), end(temp));
-        temp.resize(unique(begin(temp), end(temp)) - begin(temp));
-        for (auto &i : a) i = lower_bound(begin(temp), end(temp), i) - begin(temp);
-    }
-    ll inv = 0;
-    for (auto &i : a) {
-        inv += Get(n - 1) - Get(i);
-        Modify(i, 1);
-    }
-    cout << inv << ' ' << x;
+    cout << Solve(Solve, 0, n) << ' ' << x;
     return 0;
 }
