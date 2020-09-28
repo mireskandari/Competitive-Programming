@@ -2,10 +2,6 @@
 using namespace std;
 using ll = long long;
 
-#include <bits/extc++.h>
-using namespace __gnu_pbds;
-using pbds = tree<pair<int, int>, null_type, less<>, rb_tree_tag, tree_order_statistics_node_update>;
-
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
@@ -52,11 +48,25 @@ int main() {
         }
         swap(seg, new_seg);
     } 
+    vector<int> fen(n + 1);
+    auto Modify = [&](int idx, ll val) {
+        for (++idx; idx < n + 1; idx += idx & -idx) fen[idx] += val;
+    };
+    auto Get = [&](int idx) {
+        ll ret = 0;
+        for (++idx; idx > 0; idx -= idx & -idx) ret += fen[idx];
+        return ret;
+    };
+    {
+        vector<int> temp(begin(a), end(a));
+        sort(begin(temp), end(temp));
+        temp.resize(unique(begin(temp), end(temp)) - begin(temp));
+        for (auto &i : a) i = lower_bound(begin(temp), end(temp), i) - begin(temp);
+    }
     ll inv = 0;
-    pbds s;
-    for (int i = 0; i < n; ++i) {
-        inv += s.order_of_key({-a[i] - 1, INT_MAX});
-        s.insert({-a[i], i});
+    for (auto &i : a) {
+        inv += Get(n - 1) - Get(i);
+        Modify(i, 1);
     }
     cout << inv << ' ' << x;
     return 0;
