@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF94519755": {
+    "contest_id": 934,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/934/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A Prosperous Lot",
+    "problem_url": "https://codeforces.com/contest/934/problem/B",
+    "submission_id": "CF94519755",
+    "submission_url": "https://codeforces.com/contest/934/submission/94519755",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Oct/02/2020 15:40"
+  },
   "CF94712594": {
     "contest_id": 1422,
     "language": "C++17 (GCC 7-32)",
