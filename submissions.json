@@ -2419,6 +2419,24 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF94862917": {
+    "contest_id": 15,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/15/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Map",
+    "problem_url": "https://codeforces.com/contest/15/problem/D",
+    "submission_id": "CF94862917",
+    "submission_url": "https://codeforces.com/contest/15/submission/94862917",
+    "tags": [
+      "data structures",
+      "implementation",
+      "sortings",
+      "*2500"
+    ],
+    "timestamp": "Oct/06/2020 12:07"
+  },
   "CF94874551": {
     "contest_id": 245,
     "language": "Clang++17 Diagnostics",
