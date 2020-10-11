@@ -2419,6 +2419,24 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF95223303": {
+    "contest_id": 602,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/602/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Approximating a Constant Range",
+    "problem_url": "https://codeforces.com/contest/602/problem/B",
+    "submission_id": "CF95223303",
+    "submission_url": "https://codeforces.com/contest/602/submission/95223303",
+    "tags": [
+      "dp",
+      "implementation",
+      "two pointers",
+      "*1400"
+    ],
+    "timestamp": "Oct/11/2020 05:53"
+  },
   "CF95260661": {
     "contest_id": 1156,
     "language": "C++17 (GCC 9-64)",
