@@ -2419,6 +2419,24 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF95444336": {
+    "contest_id": 453,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/453/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Little Pony and Harmony Chest",
+    "problem_url": "https://codeforces.com/contest/453/problem/B",
+    "submission_id": "CF95444336",
+    "submission_url": "https://codeforces.com/contest/453/submission/95444336",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Oct/13/2020 12:13"
+  },
   "CF95455007": {
     "contest_id": 811,
     "language": "C++17 (GCC 9-64)",
