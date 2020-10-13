@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF95455007": {
+    "contest_id": 811,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/811/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Vladik and Memorable Trip",
+    "problem_url": "https://codeforces.com/contest/811/problem/C",
+    "submission_id": "CF95455007",
+    "submission_url": "https://codeforces.com/contest/811/submission/95455007",
+    "tags": [
+      "dp",
+      "implementation",
+      "*1900"
+    ],
+    "timestamp": "Oct/13/2020 14:46"
+  },
   "CF95534987": {
     "contest_id": 1427,
     "language": "C++17 (GCC 9-64)",
