@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF95905623": {
+    "contest_id": 1421,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1421/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Palindromifier",
+    "problem_url": "https://codeforces.com/contest/1421/problem/C",
+    "submission_id": "CF95905623",
+    "submission_url": "https://codeforces.com/contest/1421/submission/95905623",
+    "tags": [
+      "constructive algorithms",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Oct/18/2020 08:48"
+  },
   "CF95926731": {
     "contest_id": 71,
     "language": "C++17 (GCC 9-64)",
