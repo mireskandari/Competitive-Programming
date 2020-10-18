@@ -40,11 +40,14 @@ int main() {
         if (i == 0) {
           dp[i][f][s] = cost[f][s];
         } else {
+          int cst = cost[f][s];
+          int &ans = dp[i][f][s];
+          auto &par = parent[i][f][s];
           for (int p = 0; p < 26; ++p) {
             for (int k = 0; k < 26; ++k) {
               if (p == f || k == s || p == k) continue;
-              if (ChMin(dp[i][f][s], dp[i - 1][p][k] + cost[f][s])) {
-                parent[i][f][s] = {p, k};
+              if (ChMin(ans, dp[i - 1][p][k] + cst)) {
+                par = {p, k};
               }
             }
           }
