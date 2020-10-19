@@ -2419,6 +2419,23 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF96003645": {
+    "contest_id": 348,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/348/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Turtles",
+    "problem_url": "https://codeforces.com/contest/348/problem/D",
+    "submission_id": "CF96003645",
+    "submission_url": "https://codeforces.com/contest/348/submission/96003645",
+    "tags": [
+      "dp",
+      "matrices",
+      "*2500"
+    ],
+    "timestamp": "Oct/19/2020 12:09"
+  },
   "CF96076756": {
     "contest_id": 463,
     "language": "C++17 (GCC 9-64)",
