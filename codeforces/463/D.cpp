@@ -9,6 +9,18 @@ constexpr int N = 1010;
 
 vector<int> g[N];
 int a[N][10], dp[N], pos[N][50];
+char mark[N];
+
+void Go(int v) {
+  mark[v] = 1;
+  for (auto &u : g[v]) {
+    if (mark[u] == 0) {
+      Go(u);
+    }
+    dp[v] = max(dp[v], dp[u] + 1);
+  }
+  mark[v] = 2;
+}
 
 int main() {
   int n, k;
@@ -24,24 +36,23 @@ int main() {
     }
   }
   for (int i = 1; i <= n; ++i) {
-    for (int j = i + 1; j <= n; ++j) {
+    for (int j = 1; j <= n; ++j) {
       if (i == j) continue;
       bool ok = true;
       for (int x = 1; x <= k; ++x) {
-        if (pos[a[i][1]][x] > pos[a[j][1]][x]) {
+        if (pos[i][x] > pos[j][x]) {
           ok = false;
           break;
         }
       }
       if (!ok) continue;
-      g[i].push_back(j);
+      g[j].push_back(i);
     }
   }
+  fill_n(dp, N, 1);
   for (int i = 1; i <= n; ++i) {
-    for (auto& u : g[i]) {
-      dp[u] = max(dp[u], dp[i] + 1);
-    }
+    if (mark[i] == 0) Go(i);
   }
-  printf("%d", *max_element(dp, dp + N) + 1);
+  printf("%d", *max_element(dp, dp + N));
   return 0;
 }
