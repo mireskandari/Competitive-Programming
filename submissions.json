@@ -2419,6 +2419,25 @@
     ],
     "timestamp": "Feb/03/2024 19:13"
   },
+  "CF96966672": {
+    "contest_id": 1437,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1437/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Minimal Height Tree",
+    "problem_url": "https://codeforces.com/contest/1437/problem/D",
+    "submission_id": "CF96966672",
+    "submission_url": "https://codeforces.com/contest/1437/submission/96966672",
+    "tags": [
+      "graphs",
+      "greedy",
+      "shortest paths",
+      "trees",
+      "*1600"
+    ],
+    "timestamp": "Oct/28/2020 03:39"
+  },
   "CF97077981": {
     "contest_id": 85,
     "language": "C++17 (GCC 9-64)",
