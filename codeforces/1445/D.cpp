@@ -17,7 +17,7 @@ int Power(int a, int b) {
 
 const int N = 3e5 + 10;
 
-int a[N];
+int64 a[N];
 
 int main() {
 	int n;
@@ -25,9 +25,9 @@ int main() {
 	n *= 2;
 	for (int i = 0; i < n; ++i) scanf("%d", &a[i]);
 	sort(a, a + n);
-	int ans = 0;
+	int64 ans = 0;
 	for (int i = 0; i < n / 2; ++i) {
-		ans += (a[i + n / 2] - a[i]) % MO;
+		ans += a[i + n / 2] - a[i];
 		if (ans >= MO) ans -= MO;
 	}
 	int res = 1;
