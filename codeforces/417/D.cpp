@@ -7,16 +7,6 @@ using namespace std;
 using i64 = long long;
 template <class T> inline int size(T& a) { return (int)a.size(); }
 
-template <class T>
-void Read(T& a) {
-	a = 0;
-	char c = getchar();
-	while (!isdigit(c)) c = getchar();
-	for (; isdigit(c); c = getchar()) {
-		a = (a << 3) + (a << 1) + (T)(c - '0');
-	}
-}
-
 const int N = 105;
 const int M = (1 << 20) + 2;
 const i64 INF = 2e18;
@@ -42,17 +32,13 @@ void Sort() {
 }
 
 int main() {
-	Read(n);
-	Read(m);
-	Read(b);
+	scanf("%d%d%d", &n, &m, &b);
 	for (int i = 0; i < n; ++i) {
 		int sz;
-		Read(x[i]);
-		Read(k[i]);
-		Read(sz);
+		scanf("%d%d%d", &x[i], &k[i], &sz);
 		for (int j = 0; j < sz; ++j) {
 			int u;
-			Read(u);
+			scanf("%d", &u);
 			--u;
 			mask[i] ^= 1 << u;
 		}
