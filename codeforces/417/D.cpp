@@ -1,4 +1,4 @@
-#pragma GCC optimize("O3")
+#pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #include <stdio.h>
 #include <bits/stdc++.h>
@@ -52,6 +52,7 @@ int main() {
 		dp[p][1] = x[0];
 	}
 	for (int i = 1; i < n; ++i) {
+		fill_n(&new_dp[0][0], 2 * M, INF);
 		for (int p = 0; p < (1 << m); ++p) {
 			new_dp[p][0] = min(dp[p][0], 1ll * k[i] * b + dp[p ^ (p & mask[i])][1] + x[i]);
 			new_dp[p][1] = min(dp[p][1], dp[p ^ (p & mask[i])][1] + x[i]);
