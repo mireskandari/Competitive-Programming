@@ -40,3 +40,4 @@ int main() {
 	cout << "Impossible";
 	return 0;
 }
+

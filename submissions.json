@@ -16603,6 +16603,22 @@
     ],
     "timestamp": "Nov/08/2020 13:14"
   },
+  "CF98010153": {
+    "contest_id": 394,
+    "language": "GNU C++11",
+    "path": "codeforces/394/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Counting Sticks",
+    "problem_url": "https://codeforces.com/contest/394/problem/A",
+    "submission_id": "CF98010153",
+    "submission_url": "https://codeforces.com/contest/394/submission/98010153",
+    "tags": [
+      "brute force",
+      "implementation"
+    ],
+    "timestamp": "Nov/09/2020 11:22"
+  },
   "CF98016428": {
     "contest_id": 394,
     "language": "GNU C++11",
