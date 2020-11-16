@@ -9,18 +9,32 @@ using ll = long long;
 
 constexpr long double EPS = 1e-7;
 
+long double MaxSubarray(const vector<long double>& a) {
+	long double best = -1e8;
+	long double cur = 0.0;
+	for (auto& i : a) {
+		cur = max((long double) 0, cur + i);	
+		best = max(best, cur);
+	}
+	return best;
+}
+
+long double MinSubarray(const vector<long double>& a) {
+	long double best = 1e8;
+	long double cur = 0.0;
+	for (auto& i : a) {
+		cur = min((long double) 0, cur + i);
+		best = min(best, cur);
+	}
+	return best;
+}
+
 long double Check(const vector<long double>& a, long double x) {
 	vector<long double> new_a(a.size());
-	long double bestmin = 1e8, curmin = 0;
-	long double bestmax = -1e8, curmax = 0;
 	for (int i = 0; i < len(a); ++i) {
 		new_a[i] = (long double) a[i] - x;
-		curmax = max((long double) 0, curmax + new_a[i]);
-		bestmax = max(bestmax, curmax);
-		curmin = min((long double) 0, curmin + new_a[i]);
-		bestmin = min(bestmin, curmin);
 	}
-	return max(abs(bestmin), abs(bestmax));
+	return max(abs(MaxSubarray(new_a)), abs(MinSubarray(new_a)));
 }
 
 int main() {
