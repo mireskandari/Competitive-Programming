@@ -16737,6 +16737,22 @@
     ],
     "timestamp": "Nov/14/2020 13:07"
   },
+  "CF98531460": {
+    "contest_id": 578,
+    "language": "GNU C++11",
+    "path": "codeforces/578/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Weakness and Poorness",
+    "problem_url": "https://codeforces.com/contest/578/problem/C",
+    "submission_id": "CF98531460",
+    "submission_url": "https://codeforces.com/contest/578/submission/98531460",
+    "tags": [
+      "ternary search",
+      "*2000"
+    ],
+    "timestamp": "Nov/16/2020 03:25"
+  },
   "CF98531703": {
     "contest_id": 578,
     "language": "GNU C++11",
