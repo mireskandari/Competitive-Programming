@@ -35,10 +35,10 @@ int main() {
 	for (int i = 0; i < n; ++i)
 		scanf("%d", &a[i]);
 	long double l = -1e4 - 10, r = 1e4 + 10;
-	for (int step = 0; step < 300; ++step) {
+	for (int step = 0; step < 500; ++step) {
 		long double m1 = l + (r - l) / 3.0;
 		long double m2 = r - (r - l) / 3.0;
-		if (Check(m1) > Check(m2)) {
+		if (Check(m1) - Check(m2) > EPS) {
 			l = m1;
 		} else {
 			r = m2;
