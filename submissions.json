@@ -16737,6 +16737,23 @@
     ],
     "timestamp": "Nov/14/2020 13:07"
   },
+  "CF98695055": {
+    "contest_id": 1440,
+    "language": "GNU C++11",
+    "path": "codeforces/1440/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Sum of Medians",
+    "problem_url": "https://codeforces.com/contest/1440/problem/B",
+    "submission_id": "CF98695055",
+    "submission_url": "https://codeforces.com/contest/1440/submission/98695055",
+    "tags": [
+      "greedy",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Nov/17/2020 09:50"
+  },
   "CF98731689": {
     "contest_id": 1440,
     "language": "GNU C++11",
