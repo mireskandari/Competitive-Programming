@@ -16737,6 +16737,24 @@
     ],
     "timestamp": "Nov/14/2020 13:07"
   },
+  "CF98938177": {
+    "contest_id": 1452,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1452/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Radio Towers",
+    "problem_url": "https://codeforces.com/contest/1452/problem/D",
+    "submission_id": "CF98938177",
+    "submission_url": "https://codeforces.com/contest/1452/submission/98938177",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Nov/19/2020 11:07"
+  },
   "CF98976715": {
     "contest_id": 1452,
     "language": "C++17 (GCC 7-32)",
