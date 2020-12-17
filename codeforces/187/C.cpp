@@ -2,131 +2,133 @@
 using namespace std;
 template <typename T> inline int len(const T& a) { return a.size(); }
 
-constexpr int mxn = 5e5 + 10, inf = 0x3f3f3f3f;
+struct dsu {
+	vector<int> guys;
+	vector<set<int>> qs;
 
-int n, m, k, s, t, dist[mxn], hub[mxn], boss[mxn], fromt[mxn];
-bool used[mxn];
-pair<int, int> edge[mxn];
-vector<int> g[mxn];
-
-void prep() {
-	memset(dist, 0x3f, sizeof(dist));
-	memset(fromt, 0x3f, sizeof(fromt));
-	scanf("%d%d%d", &n, &m, &k);
-	for (int i = 0; i < k; ++i) {
-		scanf("%d", &hub[i]);
-		--hub[i];
+	dsu(int n, vector<pair<int, int>> &queries) : guys(n, -1), qs(n) {
+		for (int i = 0; i < len(queries); ++i) {
+			qs[queries[i].first].insert(i);
+			qs[queries[i].second].insert(i);
+		}
 	}
+
+	int root(int v) {
+		return guys[v] < 0 ? v : guys[v] = root(guys[v]);
+	}
+
+	void unite(int v, int u, long long w, vector<long long> &ans) {
+		v = root(v), u = root(u);
+		if (v == u) {
+			return;
+		}
+		if (guys[u] < guys[v]) {
+			swap(u, v);
+		}
+		for (auto &q : qs[u]) {
+			int l = len(qs[v]);
+			qs[v].insert(q);
+			if (l == len(qs[v])) {
+				ans[q] = w;
+				qs[v].erase(q);
+			}
+		}
+		set<int>().swap(qs[u]);
+		guys[v] += guys[u];
+		guys[u] = v;
+	}
+};
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	int n, m, k;
+	cin >> n >> m >> k;
+	vector<int> hub(k);
+	vector<bool> isgood(n);
+	for (int i = 0; i < k; ++i) {
+		cin >> hub[i];
+		--hub[i];
+		isgood[hub[i]] = true;
+	}
+	vector<vector<int>> g(n);
+	vector<pair<int, int>> edges(m);
 	for (int i = 0; i < m; ++i) {
 		int v, u;
-		scanf("%d%d", &v, &u);
-		edge[i] = {--v, --u};
+		cin >> v >> u;
+		edges[i] = {--v, --u};
 		g[v].push_back(i);
 		g[u].push_back(i);
 	}
-	scanf("%d%d", &s, &t);
-	--s;
-	--t;
-	queue<int> q;
-	for (int i = 0; i < k; ++i) {
-		q.push(hub[i]);
-		dist[hub[i]] = 0;
-		boss[hub[i]] = hub[i];
+
+	vector<pair<int, int>> queries(1);
+	cin >> queries[0].first >> queries[0].second;
+	--queries[0].first, --queries[0].second;
+	for (int i = 0; i < len(queries); ++i) {
+		if (!isgood[queries[i].second]) {
+			hub.push_back(queries[i].second);
+			++k;
+		}
 	}
+	for (int i = 0; i < k; ++i) {
+		if (queries[0].first == hub[i]) {
+			queries[0].first = i;
+			break;
+		}
+	}
+	for (int i = 0; i < k; ++i) {
+		if (queries[0].second == hub[i]) {
+			queries[0].second = i;
+			break;
+		}
+	}
+
+	constexpr int inf = 0x3f3f3f3f;
+	vector<int> dad(n, -1), dist(n, inf);
+	queue<int> q;
+	for (int i = 0; i < len(hub); ++i) {
+		dad[hub[i]] = i;
+		dist[hub[i]] = 0;
+		q.push(hub[i]);
+	}
+
 	while (!q.empty()) {
 		int v = q.front();
 		q.pop();
-		for (auto e : g[v]) {
+		for (auto &e : g[v]) {
 			int _, u;
-			tie(_, u) = edge[e];
+			tie(_, u) = edges[e];
 			if (u == v) {
-				swap(_, u);
+				swap(u, _);
 			}
 			if (dist[u] >= inf) {
 				dist[u] = dist[v] + 1;
-				used[e] = true;
-				boss[u] = boss[v];
+				dad[u] = dad[v];
 				q.push(u);
 			}
 		}
 	}
-	q = queue<int>();
-	q.push(t);
-	fromt[t] = 0;
-	while (!q.empty()) {
-		int v = q.front();
-		q.pop();
-		for (auto e : g[v]) {
-			int _, u;
-			tie(_, u) = edge[e];
-			if (u == v) {
-				swap(_, u);
-			}
-			if (fromt[u] >= inf) {
-				fromt[u] = fromt[v] + 1;
-				q.push(u);
-			}
-		}
-	}
-}
-
-vector<int> gg[mxn];
-bool mark[mxn];
-
-void dfs(int v) {
-	mark[v] = true;
-	for (auto u : gg[v]) {
-		if (mark[u]) {
-			continue;
-		}
-		dfs(u);
-	}
-}
-
-bool check(int q) {
-	fill_n(gg, mxn, vector<int>{});
-	memset(mark, 0, sizeof(mark));
+	
+	vector<tuple<long long, int, int>> new_edges;
 	for (int i = 0; i < m; ++i) {
-		if (used[i]) {
-			continue;
+		int u, v;
+		tie(u, v) = edges[i];
+		if (dad[v] != dad[u]) {
+			new_edges.push_back({1ll * dist[v] + dist[u] + 1, dad[v], dad[u]});
 		}
+	}
+	sort(new_edges.begin(), new_edges.end());
+	dsu ds(k, queries);
+	
+	vector<long long> ans(len(queries), inf);
+	for (int i = 0; i < len(new_edges); ++i) {
 		int v, u;
-		tie(v, u) = edge[i];
-		int d = dist[v] + dist[u] + 1;
-		if (d <= q) {
-			gg[boss[v]].push_back(boss[u]);
-			gg[boss[u]].push_back(boss[v]);
-		}
+		long long w;
+		tie(w, v, u) = new_edges[i];
+		ds.unite(v, u, w, ans);
 	}
-	dfs(s);
-	for (int i = 0; i < k; ++i) {
-		if (mark[hub[i]] && fromt[hub[i]] <= q) {
-			return true;
-		}
-	}
-	return false;
-}
 
-void run_case() {
-	int low = 1, high = n;
-	while (high - low > 0) {
-		int mid = (low + high) >> 1;
-		if (check(mid)) {
-			high = mid;
-		} else {
-			low = mid + 1;
-		}
-	}
-	if (!check(low)) {
-		puts("-1");
-	} else {
-		printf("%d", low);
-	}
-}
-
-int main() {
-	prep();
-	run_case();
+	cout << (ans[0] >= inf ? -1 : ans[0]);
 	return 0;
 }
 
