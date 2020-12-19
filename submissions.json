@@ -72,6 +72,23 @@
     ],
     "timestamp": "Dec/08/2020 09:39"
   },
+  "CF101748799": {
+    "contest_id": 1459,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1459/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Glass Half Spilled",
+    "problem_url": "https://codeforces.com/contest/1459/problem/D",
+    "submission_id": "CF101748799",
+    "submission_url": "https://codeforces.com/contest/1459/submission/101748799",
+    "tags": [
+      "brute force",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Dec/19/2020 05:44"
+  },
   "CF101982697": {
     "contest_id": 267,
     "language": "C++17 (GCC 7-32)",
