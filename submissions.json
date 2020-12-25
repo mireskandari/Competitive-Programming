@@ -72,6 +72,24 @@
     ],
     "timestamp": "Dec/08/2020 09:39"
   },
+  "CF102341807": {
+    "contest_id": 547,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/547/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Mike and Fish",
+    "problem_url": "https://codeforces.com/contest/547/problem/D",
+    "submission_id": "CF102341807",
+    "submission_url": "https://codeforces.com/contest/547/submission/102341807",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "*2600"
+    ],
+    "timestamp": "Dec/25/2020 12:49"
+  },
   "CF102442620": {
     "contest_id": 508,
     "language": "C++17 (GCC 7-32)",
