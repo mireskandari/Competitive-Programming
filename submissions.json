@@ -125,6 +125,25 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF102930261": {
+    "contest_id": 893,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/893/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Counting Arrays",
+    "problem_url": "https://codeforces.com/contest/893/problem/E",
+    "submission_id": "CF102930261",
+    "submission_url": "https://codeforces.com/contest/893/submission/102930261",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "number theory",
+      "*2000"
+    ],
+    "timestamp": "Dec/31/2020 12:48"
+  },
   "CF102962949": {
     "contest_id": 1428,
     "language": "C++17 (GCC 7-32)",
