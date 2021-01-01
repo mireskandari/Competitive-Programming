@@ -125,6 +125,23 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF102963987": {
+    "contest_id": 1428,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1428/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Belted Rooms",
+    "problem_url": "https://codeforces.com/contest/1428/problem/B",
+    "submission_id": "CF102963987",
+    "submission_url": "https://codeforces.com/contest/1428/submission/102963987",
+    "tags": [
+      "graphs",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Jan/01/2021 09:17"
+  },
   "CF102966705": {
     "contest_id": 1428,
     "language": "C++17 (GCC 7-32)",
