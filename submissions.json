@@ -125,6 +125,25 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF102966705": {
+    "contest_id": 1428,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1428/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "ABBB",
+    "problem_url": "https://codeforces.com/contest/1428/problem/C",
+    "submission_id": "CF102966705",
+    "submission_url": "https://codeforces.com/contest/1428/submission/102966705",
+    "tags": [
+      "brute force",
+      "data structures",
+      "greedy",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Jan/01/2021 09:52"
+  },
   "CF103190037": {
     "contest_id": 1472,
     "language": "C++17 (GCC 7-32)",
