@@ -125,6 +125,23 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF103649870": {
+    "contest_id": 1246,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1246/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Rock Is Push",
+    "problem_url": "https://codeforces.com/contest/1246/problem/C",
+    "submission_id": "CF103649870",
+    "submission_url": "https://codeforces.com/contest/1246/submission/103649870",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Jan/07/2021 10:50"
+  },
   "CF103654284": {
     "contest_id": 1470,
     "language": "C++17 (GCC 7-32)",
