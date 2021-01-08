@@ -6,40 +6,42 @@ constexpr int mod = 1000 * 1000 * 1000 + 7;
 
 struct mint {
 	int a;
+
 	mint(long long n = 0) : a(n % mod) {
 		if (a < 0) {
 			a += mod;
 		}
 	}
-	mint operator-() const {
+	
+	mint operator-() {
 		return -a + mod;
 	}
-	mint& operator+=(const mint &other) {
+	void operator+=(mint other) {
 		a += other.a;
 		if (a >= mod) {
 			a -= mod;
 		}
-		return *this;
 	}
-	mint& operator-=(const mint &other) {
+	mint operator+(mint other) {
+		other += *this;
+		return other;
+	}
+	void operator-=(mint other) {
 		a -= other.a;
 		if (a < 0) {
 			a += mod;
 		}
-		return *this;
 	}
-	mint& operator*=(const mint &other) { 
+	mint operator-(mint other) {
+		other -= *this;
+		return other;
+	}
+	void operator*=(mint other) {
 		a = 1ll * a * other.a % mod;
-		return *this;
 	}
-	mint operator-(const mint &other) const { 
-		return (mint(*this) -= other); 
-	}
-	mint operator+(const mint &other) const {
-		return (mint(*this) += other); 
-	}
-	mint operator*(const mint &other) const { 
-		return (mint(*this) *= other); 
+	mint operator*(mint other) {
+		other *= *this;
+		return other;
 	}
 };
 
@@ -83,3 +85,4 @@ int main() {
 	cout << ans.a;
 	return 0;
 }
+
