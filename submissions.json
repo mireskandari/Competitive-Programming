@@ -125,6 +125,25 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF103688940": {
+    "contest_id": 568,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/568/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Primes or Palindromes?",
+    "problem_url": "https://codeforces.com/contest/568/problem/A",
+    "submission_id": "CF103688940",
+    "submission_url": "https://codeforces.com/contest/568/submission/103688940",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "number theory",
+      "*1600"
+    ],
+    "timestamp": "Jan/08/2021 01:30"
+  },
   "CF103690908": {
     "contest_id": 568,
     "language": "C++17 (GCC 7-32)",
