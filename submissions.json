@@ -125,6 +125,24 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF103823508": {
+    "contest_id": 568,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/568/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Symmetric and Transitive",
+    "problem_url": "https://codeforces.com/contest/568/problem/B",
+    "submission_id": "CF103823508",
+    "submission_url": "https://codeforces.com/contest/568/submission/103823508",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Jan/08/2021 13:59"
+  },
   "CF103827711": {
     "contest_id": 242,
     "language": "C++17 (GCC 7-32)",
