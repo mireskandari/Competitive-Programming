@@ -125,6 +125,25 @@
     ],
     "timestamp": "Dec/30/2020 11:59"
   },
+  "CF103906530": {
+    "contest_id": 144,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/144/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Missile Silos",
+    "problem_url": "https://codeforces.com/contest/144/problem/D",
+    "submission_id": "CF103906530",
+    "submission_url": "https://codeforces.com/contest/144/submission/103906530",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "graphs",
+      "shortest paths",
+      "*1900"
+    ],
+    "timestamp": "Jan/09/2021 13:09"
+  },
   "CF104065777": {
     "contest_id": 449,
     "language": "C++17 (GCC 7-32)",
