@@ -1,4 +1,21 @@
 {
+  "CF106549197": {
+    "contest_id": 1481,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1481/A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Space Navigation ",
+    "problem_url": "https://codeforces.com/contest/1481/problem/A",
+    "submission_id": "CF106549197",
+    "submission_url": "https://codeforces.com/contest/1481/submission/106549197",
+    "tags": [
+      "greedy",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Feb/05/2021 09:49"
+  },
   "CF106558536": {
     "contest_id": 1481,
     "language": "C++17 (GCC 7-32)",
