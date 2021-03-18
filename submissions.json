@@ -1,4 +1,23 @@
 {
+  "CF110292818": {
+    "contest_id": 1501,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1501/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Two chandeliers",
+    "problem_url": "https://codeforces.com/contest/1501/problem/D",
+    "submission_id": "CF110292818",
+    "submission_url": "https://codeforces.com/contest/1501/submission/110292818",
+    "tags": [
+      "binary search",
+      "brute force",
+      "chinese remainder theorem",
+      "math",
+      "*2200"
+    ],
+    "timestamp": "Mar/18/2021 04:20"
+  },
   "CF114866518": {
     "contest_id": 1515,
     "language": "C++17 (GCC 7-32)",
