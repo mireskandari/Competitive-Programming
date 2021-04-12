@@ -455,6 +455,23 @@
     ],
     "timestamp": "Mar/18/2021 04:20"
   },
+  "CF112755074": {
+    "contest_id": 587,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/587/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Duff in the Army",
+    "problem_url": "https://codeforces.com/contest/587/problem/C",
+    "submission_id": "CF112755074",
+    "submission_url": "https://codeforces.com/contest/587/submission/112755074",
+    "tags": [
+      "data structures",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Apr/12/2021 03:08"
+  },
   "CF112769378": {
     "contest_id": 555,
     "language": "C++17 (GCC 7-32)",
