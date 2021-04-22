@@ -455,6 +455,23 @@
     ],
     "timestamp": "Mar/18/2021 04:20"
   },
+  "CF113880248": {
+    "contest_id": 894,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/894/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Ralph and Mushrooms",
+    "problem_url": "https://codeforces.com/contest/894/problem/E",
+    "submission_id": "CF113880248",
+    "submission_url": "https://codeforces.com/contest/894/submission/113880248",
+    "tags": [
+      "dp",
+      "graphs",
+      "*2100"
+    ],
+    "timestamp": "Apr/22/2021 08:00"
+  },
   "CF113944508": {
     "contest_id": 613,
     "language": "C++17 (GCC 7-32)",
