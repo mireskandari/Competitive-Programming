@@ -455,6 +455,26 @@
     ],
     "timestamp": "Mar/18/2021 04:20"
   },
+  "CF114824864": {
+    "contest_id": 276,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/276/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Little Girl and Maximum XOR",
+    "problem_url": "https://codeforces.com/contest/276/problem/D",
+    "submission_id": "CF114824864",
+    "submission_url": "https://codeforces.com/contest/276/submission/114824864",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "greedy",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "May/02/2021 01:42"
+  },
   "CF114866518": {
     "contest_id": 1515,
     "language": "C++17 (GCC 7-32)",
