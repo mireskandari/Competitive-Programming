@@ -1,4 +1,22 @@
 {
+  "CF117212028": {
+    "contest_id": 1528,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1528/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Kavi on Pairing Duty",
+    "problem_url": "https://codeforces.com/contest/1528/problem/B",
+    "submission_id": "CF117212028",
+    "submission_url": "https://codeforces.com/contest/1528/submission/117212028",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "May/24/2021 11:12"
+  },
   "CF123713832": {
     "contest_id": 1552,
     "language": "C++17 (GCC 7-32)",
