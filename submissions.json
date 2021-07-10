@@ -652,6 +652,26 @@
     ],
     "timestamp": "May/24/2021 11:12"
   },
+  "CF122017707": {
+    "contest_id": 1281,
+    "language": "GNU C++11",
+    "path": "codeforces/1281/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Jeremy Bearimy",
+    "problem_url": "https://codeforces.com/contest/1281/problem/E",
+    "submission_id": "CF122017707",
+    "submission_url": "https://codeforces.com/contest/1281/submission/122017707",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "implementation",
+      "trees",
+      "*2000"
+    ],
+    "timestamp": "Jul/10/2021 15:43"
+  },
   "CF122196495": {
     "contest_id": 455,
     "language": "GNU C++11",
