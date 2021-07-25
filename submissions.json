@@ -1,4 +1,26 @@
 {
+  "CF123759220": {
+    "contest_id": 1552,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1552/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Array Differentiation",
+    "problem_url": "https://codeforces.com/contest/1552/problem/D",
+    "submission_id": "CF123759220",
+    "submission_url": "https://codeforces.com/contest/1552/submission/123759220",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jul/25/2021 12:48"
+  },
   "CF123774664": {
     "contest_id": 620,
     "language": "GNU C++11",
