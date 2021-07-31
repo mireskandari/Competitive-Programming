@@ -744,6 +744,22 @@
     ],
     "timestamp": "Jul/29/2021 10:46"
   },
+  "CF124451701": {
+    "contest_id": 240,
+    "language": "GNU C++11",
+    "path": "codeforces/240/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "TorCoder",
+    "problem_url": "https://codeforces.com/contest/240/problem/F",
+    "submission_id": "CF124451701",
+    "submission_url": "https://codeforces.com/contest/240/submission/124451701",
+    "tags": [
+      "data structures",
+      "*2600"
+    ],
+    "timestamp": "Jul/31/2021 14:59"
+  },
   "CF124519284": {
     "contest_id": 1549,
     "language": "C++17 (GCC 7-32)",
