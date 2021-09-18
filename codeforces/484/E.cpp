@@ -6,12 +6,12 @@ constexpr int N = 1e5 + 10;
 
 struct Node {
 	int p, s, mx, size;
- 
+
 	Node(int a = 0, int u = 0, int v = 0) : p(a), s(a), mx(a), size(v - u) {}
 };
- 
+
 Node t[N << 2];
- 
+
 void build(int c, int b, int e) {
 	t[c].p = t[c].s = t[c].mx = 0;
 	t[c].size = e - b;
@@ -22,7 +22,7 @@ void build(int c, int b, int e) {
 	build(c << 1, b, m);
 	build(c << 1 | 1, m, e);
 }
- 
+
 void pull(Node &c, Node l, Node r, bool change) {
 	c.p = l.p + (l.p == l.size ? r.p : 0);
 	c.s = r.s + (r.s == r.size ? l.s : 0);
@@ -31,7 +31,7 @@ void pull(Node &c, Node l, Node r, bool change) {
 	}
 	c.mx = max({l.mx, r.mx, l.s + r.p});
 }
- 
+
 void update(int c, int b, int e, int i) {
 	if (e - b == 1) {
 		t[c].p = 1;
@@ -47,7 +47,7 @@ void update(int c, int b, int e, int i) {
 	}
 	pull(t[c], t[l], t[r], false);
 }
- 
+
 Node query(int c, int b, int e, int u, int v) {
 	if (u <= b && e <= v) {
 		return t[c];
@@ -67,7 +67,7 @@ Node query(int c, int b, int e, int u, int v) {
 }
 
 void show(int c, int b, int e) {
-	cerr << b << ' ' << e << ' ' << t[c].p << ' ' << t[c].s << ' ' << t[c].mx << '\n';
+	cerr << b << ' ' << e << ' ' << t[c].p << ' ' << t[c].s << ' ' << t[c].mx << ' ' << t[c].size << '\n';
 	if (e - b == 1) {
 		return;
 	}
@@ -76,66 +76,76 @@ void show(int c, int b, int e) {
 	show(c << 1 | 1, m, e);
 }
 
-int n, m, h[N], low[N], mid[N], high[N];
+int n, m;
+int h[N], low[N], mid[N], high[N];
+pair<int, int> sh[N];
+
 tuple<int, int, int> qq[N];
-vector<int> sweep[N];
-int tmpp[N], tmp2[N];
+vector<int> qry[N];
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
-
+	
 	cin >> n;
+	build(1, 0, n);
+	//show(1, 0, n);
+
 	for (int i = 0; i < n; ++i) {
 		cin >> h[i];
-		tmpp[i] = h[i];
-		tmp2[i] = i;
+		sh[i] = {h[i], i};
 	}
-	sort(tmp2, tmp2 + n, [&](int l, int r) {
-		return h[l] < h[r];
-	});
-	sort(tmpp, tmpp + n);
+	sort(sh, sh + n, greater<pair<int, int>>());
+	int unique_size = (int) set<int>(h, h + n).size();
 	
 	cin >> m;
-	/*for (int i = 0; i < m; ++i) {
-		int a;
-		cin >> a;
-		update(1, 0, n, a);
-		show(1, 0, n);
-		cerr << "\n\n\n";
-	}*/
-
 	for (int i = 0; i < m; ++i) {
 		cin >> get<0>(qq[i]) >> get<1>(qq[i]) >> get<2>(qq[i]);
 		--get<0>(qq[i]);
-		low[i] = 0, high[i] = n - 1;
+		low[i] = 0;
+		high[i] = unique_size - 1;
 	}
 	
 	for (int l = 0; l < 23; ++l) {
-		//cerr << "KIRESAG\n";
-		fill(sweep, sweep + N, vector<int>());
+		//cerr << "CURRENTLY AT: " << l << '\n';
+		fill(qry, qry + n, vector<int>());
 		build(1, 0, n);
+
 		for (int i = 0; i < m; ++i) {
-			mid[i] = (low[i] + high[i] + 1) >> 1;
-			sweep[mid[i]].push_back(i);
+			//cerr << "    QUERY: " << i << " ANS IS = " << low[i] << ' ' << high[i] << '\n';
+			mid[i] = (low[i] + high[i]) >> 1;
+			qry[mid[i]].push_back(i);
 		}
-		for (int i = n - 1; i >= 0; --i) {
-			update(1, 0, n, tmp2[i]);
-			//show(1, 0, n);
-			//cerr << "\n\n\n";
-			for (auto &q : sweep[i]) {
-				//cerr << q << ' ' << query(1, 0, n, get<0>(qq[q]), get<1>(qq[q])).mx << '\n';
-				if (query(1, 0, n, get<0>(qq[q]), get<1>(qq[q])).mx >= get<2>(qq[q])) {
-					low[q] = i;
+
+		for (int i = 0, j = 0, x = 0; i < n; i = j, ++x) {
+			while (j < n && sh[j].first == sh[i].first) {
+				update(1, 0, n, sh[j++].second);
+			}
+			
+			for (auto &q : qry[x]) {
+				int l = get<0>(qq[q]), r = get<1>(qq[q]), w = get<2>(qq[q]);
+				if (query(1, 0, n, l, r).mx >= w) {
+					//cerr << "KIR\n";
+					high[q] = x;
 				} else {
-					high[q] = i - 1;
+					low[q] = x + 1;
 				}
 			}
+			//cerr << "KIRESAG TO KOSE NANAT: " << i << ' ' << j << '\n';
+			//show(1, 0, n);
 		}
 	}
+	
+	vector<int> temp(h, h + n);
+	for (int i = 0; i < n; ++i) {
+		temp[i] = -temp[i];
+	}
+	sort(temp.begin(), temp.end());
+	temp.resize(unique(temp.begin(), temp.end()) - temp.begin());
+
 
 	for (int i = 0; i < m; ++i) {
-		assert(low[i] == high[i]);
-		cout << tmpp[low[i]] << '\n';
+		//cerr << low[i] << '\n';
+		cout << -temp[low[i]] << '\n';
 	}
 }
