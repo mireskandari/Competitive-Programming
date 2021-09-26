@@ -834,6 +834,23 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF129934059": {
+    "contest_id": 438,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/438/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "The Child and Sequence",
+    "problem_url": "https://codeforces.com/contest/438/problem/D",
+    "submission_id": "CF129934059",
+    "submission_url": "https://codeforces.com/contest/438/submission/129934059",
+    "tags": [
+      "data structures",
+      "math",
+      "*2300"
+    ],
+    "timestamp": "Sep/26/2021 10:29"
+  },
   "CF130413931": {
     "contest_id": 633,
     "language": "C++17 (GCC 7-32)",
