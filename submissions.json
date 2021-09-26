@@ -834,6 +834,24 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF129907842": {
+    "contest_id": 446,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/446/C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "DZY Loves Fibonacci Numbers",
+    "problem_url": "https://codeforces.com/contest/446/problem/C",
+    "submission_id": "CF129907842",
+    "submission_url": "https://codeforces.com/contest/446/submission/129907842",
+    "tags": [
+      "data structures",
+      "math",
+      "number theory",
+      "*2400"
+    ],
+    "timestamp": "Sep/26/2021 04:36"
+  },
   "CF129934059": {
     "contest_id": 438,
     "language": "C++17 (GCC 7-32)",
