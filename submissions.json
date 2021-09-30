@@ -834,6 +834,26 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF130413931": {
+    "contest_id": 633,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/633/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Yash And Trees",
+    "problem_url": "https://codeforces.com/contest/633/problem/G",
+    "submission_id": "CF130413931",
+    "submission_url": "https://codeforces.com/contest/633/submission/130413931",
+    "tags": [
+      "bitmasks",
+      "data structures",
+      "dfs and similar",
+      "math",
+      "number theory",
+      "*2800"
+    ],
+    "timestamp": "Sep/30/2021 16:30"
+  },
   "CF130654247": {
     "contest_id": 377,
     "language": "C++17 (GCC 7-32)",
