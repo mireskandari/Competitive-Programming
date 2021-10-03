@@ -834,6 +834,22 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF130654247": {
+    "contest_id": 377,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/377/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Developing Game",
+    "problem_url": "https://codeforces.com/contest/377/problem/D",
+    "submission_id": "CF130654247",
+    "submission_url": "https://codeforces.com/contest/377/submission/130654247",
+    "tags": [
+      "data structures",
+      "*2400"
+    ],
+    "timestamp": "Oct/03/2021 08:46"
+  },
   "CF130956459": {
     "contest_id": 1580,
     "language": "C++17 (GCC 7-32)",
