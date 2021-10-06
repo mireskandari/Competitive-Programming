@@ -834,6 +834,23 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF130993436": {
+    "contest_id": 914,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/914/D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Bash and a Tough Math Puzzle",
+    "problem_url": "https://codeforces.com/contest/914/problem/D",
+    "submission_id": "CF130993436",
+    "submission_url": "https://codeforces.com/contest/914/submission/130993436",
+    "tags": [
+      "data structures",
+      "number theory",
+      "*1900"
+    ],
+    "timestamp": "Oct/06/2021 11:43"
+  },
   "CF131098446": {
     "contest_id": 342,
     "language": "C++17 (GCC 7-32)",
