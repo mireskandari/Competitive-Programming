@@ -834,6 +834,22 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF131235312": {
+    "contest_id": 145,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/145/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Lucky Queries",
+    "problem_url": "https://codeforces.com/contest/145/problem/E",
+    "submission_id": "CF131235312",
+    "submission_url": "https://codeforces.com/contest/145/submission/131235312",
+    "tags": [
+      "data structures",
+      "*2400"
+    ],
+    "timestamp": "Oct/08/2021 14:14"
+  },
   "CF131465477": {
     "contest_id": 38,
     "language": "C++17 (GCC 7-32)",
