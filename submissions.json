@@ -834,6 +834,22 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF131465477": {
+    "contest_id": 38,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/38/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Queue",
+    "problem_url": "https://codeforces.com/contest/38/problem/G",
+    "submission_id": "CF131465477",
+    "submission_url": "https://codeforces.com/contest/38/submission/131465477",
+    "tags": [
+      "data structures",
+      "*2300"
+    ],
+    "timestamp": "Oct/10/2021 08:58"
+  },
   "CF131476758": {
     "contest_id": 848,
     "language": "C++17 (GCC 7-32)",
