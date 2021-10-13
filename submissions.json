@@ -834,6 +834,24 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF131865818": {
+    "contest_id": 213,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/213/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Two Permutations",
+    "problem_url": "https://codeforces.com/contest/213/problem/E",
+    "submission_id": "CF131865818",
+    "submission_url": "https://codeforces.com/contest/213/submission/131865818",
+    "tags": [
+      "data structures",
+      "hashing",
+      "strings",
+      "*2700"
+    ],
+    "timestamp": "Oct/13/2021 14:41"
+  },
   "CF131869594": {
     "contest_id": 833,
     "language": "C++17 (GCC 7-32)",
