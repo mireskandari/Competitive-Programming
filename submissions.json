@@ -834,6 +834,26 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF131869594": {
+    "contest_id": 833,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/833/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The Bakery",
+    "problem_url": "https://codeforces.com/contest/833/problem/B",
+    "submission_id": "CF131869594",
+    "submission_url": "https://codeforces.com/contest/833/submission/131869594",
+    "tags": [
+      "binary search",
+      "data structures",
+      "divide and conquer",
+      "dp",
+      "two pointers",
+      "*2200"
+    ],
+    "timestamp": "Oct/13/2021 15:33"
+  },
   "CF132011115": {
     "contest_id": 281,
     "language": "C++17 (GCC 7-32)",
