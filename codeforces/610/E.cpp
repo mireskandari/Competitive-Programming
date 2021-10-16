@@ -6,28 +6,78 @@ constexpr int N = 2e5 + 10;
 
 int n, m, k;
 string s;
-int mat[10][10];
-set<pair<pair<int, int>, int>> st;
+
+struct Node {
+	int mat[10][10], f, l, lz;
+
+	Node() : lz(-1) {}
+};
+
+Node t[N << 2];
+
+void apply(int c, int len, int x) {
+	memset(t[c].mat, 0, sizeof(t[c].mat));
+	t[c].mat[x][x] = len - 1;
+	t[c].f = t[c].l = t[c].lz = x;
+}
+
+void pull(int c, int l, int r) {
+	for (int i = 0; i < k; ++i) {
+		for (int j = 0; j < k; ++j) {
+			t[c].mat[i][j] = t[l].mat[i][j] + t[r].mat[i][j];
+		}
+	}
+	t[c].mat[t[l].l][t[r].f]++;
+	t[c].f = t[l].f;
+	t[c].l = t[r].l;
+}
+
+void build(int c, int b, int e) {
+	if (e - b == 1) {
+		apply(c, 1, s[b] - 'a');
+		return;
+	}
+	int m = (b + e) >> 1, l = c << 1, r = l | 1;
+	build(l, b, m);
+	build(r, m, e);
+	pull(c, l, r);
+}
+
+void update(int c, int b, int e, int u, int v, int x) {
+	if (v <= b || e <= u) {
+		return;
+	}
+	if (u <= b && e <= v) {
+		apply(c, e - b, x);
+		return;
+	}
+	int m = (b + e) >> 1, l = c << 1, r = l | 1;
+	if (t[c].lz != -1) {
+		apply(l, m - b, t[c].lz);
+		apply(r, e - m, t[c].lz);
+		t[c].lz = -1;
+	}
+	update(l, b, m, u, v, x);
+	update(r, m, e, u, v, x);
+	pull(c, l, r);
+}
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
 	
 	cin >> n >> m >> k >> s;
-	for (int i = 0; i < n - 1; ++i) {
-		mat[s[i] - 'a'][s[i + 1] - 'a']++;
-	}
-	for (int i = 0, j = 0; i < n; i = j) {
-		while (j < n && s[i] == s[j]) {
-			++j;
-		}
-		st.insert({{i, j - 1}, s[i] - 'a'});
-	}
+	build(1, 0, n);
 
 	while (m--) {
 		int op;
 		cin >> op;
-		if (op == 2) {
+		if (op == 1) {
+			int l, r;
+			char c;
+			cin >> l >> r >> c;
+			update(1, 0, n, l - 1, r, c - 'a');
+		} else {
 			string p;
 			cin >> p;
 			vector<int> pos(k);
@@ -37,61 +87,10 @@ int main() {
 			int ans = 1;
 			for (int i = 0; i < k; ++i) {
 				for (int j = 0; j < k; ++j) {
-					ans += mat[i][j] * (pos[j] <= pos[i]);
+					ans += t[1].mat[i][j] * (pos[j] <= pos[i]);
 				}
 			}
 			cout << ans << '\n';
-		} else {
-			int u, v;
-			char c;
-			cin >> u >> v >> c;
-			--u, --v;
-			auto l = prev(st.lower_bound({{u + 1, INT_MIN}, INT_MIN}));
-			auto r = prev(st.lower_bound({{v + 1, INT_MIN}, INT_MIN}));
-			
-			vector<pair<pair<int, int>, int>> tmp;
-			for (auto it = l; it != next(r); ++it) {
-				tmp.push_back(*it);
-			}
-			
-			int ll = tmp[0].first.first, rr = tmp.back().first.second, cc = tmp[0].second;
-			if ((int) tmp.size() == 1) {
-				mat[cc][cc] -= rr - ll;
-			} else {
-				mat[cc][cc] -= tmp[0].first.second - ll;
-				for (int i = 1; i < (int) tmp.size(); ++i) {
-					mat[cc][tmp[i].second]--;
-					cc = tmp[i].second;
-					mat[cc][cc] -= tmp[i].first.second - tmp[i].first.first;
-				}
-			}
-
-			vector<pair<pair<int, int>, int>> tmp2;
-			tmp2.push_back({{u, v}, c - 'a'});
-			mat[c - 'a'][c - 'a'] += v - u;
-			if (ll <= u - 1) {
-				tmp2.push_back({{ll, u - 1}, tmp[0].second});
-				mat[tmp[0].second][tmp[0].second] += u - 1- ll;
-				mat[tmp[0].second][c - 'a']++;
-			} else if (l != st.begin()) {
-				mat[prev(l)->second][tmp[0].second]--;
-				mat[prev(l)->second][c - 'a']++;
-			}
-			if (v + 1 <= rr) {
-				tmp2.push_back({{v + 1, rr}, tmp.back().second});
-				mat[tmp.back().second][tmp.back().second] += rr - v - 1;
-				mat[c - 'a'][tmp.back().second]++;
-			} else if (r != prev(st.end())) {
-				mat[tmp.back().second][next(r)->second]--;
-				mat[c - 'a'][next(r)->second]++;
-			}
-			
-			for (auto &pr : tmp) {
-				st.erase(pr);
-			}
-			for (auto &pr : tmp2) {
-				st.insert(pr);
-			}
 		}
 	}
 }
