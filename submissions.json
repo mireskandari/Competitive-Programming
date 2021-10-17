@@ -834,6 +834,26 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF132281758": {
+    "contest_id": 1062,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1062/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Company",
+    "problem_url": "https://codeforces.com/contest/1062/problem/E",
+    "submission_id": "CF132281758",
+    "submission_url": "https://codeforces.com/contest/1062/submission/132281758",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dfs and similar",
+      "greedy",
+      "trees",
+      "*2300"
+    ],
+    "timestamp": "Oct/17/2021 13:37"
+  },
   "CF132288123": {
     "contest_id": 1074,
     "language": "C++17 (GCC 7-32)",
