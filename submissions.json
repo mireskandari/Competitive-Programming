@@ -834,6 +834,25 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF132814892": {
+    "contest_id": 1088,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1088/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Ehab and a component choosing problem",
+    "problem_url": "https://codeforces.com/contest/1088/problem/E",
+    "submission_id": "CF132814892",
+    "submission_url": "https://codeforces.com/contest/1088/submission/132814892",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "Oct/23/2021 15:59"
+  },
   "CF133081298": {
     "contest_id": 372,
     "language": "C++17 (GCC 7-32)",
