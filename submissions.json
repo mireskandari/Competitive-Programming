@@ -834,6 +834,23 @@
     ],
     "timestamp": "Sep/22/2021 07:56"
   },
+  "CF133581859": {
+    "contest_id": 1303,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1303/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Erase Subsequences",
+    "problem_url": "https://codeforces.com/contest/1303/problem/E",
+    "submission_id": "CF133581859",
+    "submission_url": "https://codeforces.com/contest/1303/submission/133581859",
+    "tags": [
+      "dp",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "Oct/30/2021 04:17"
+  },
   "CF133592821": {
     "contest_id": 1182,
     "language": "C++17 (GCC 7-32)",
