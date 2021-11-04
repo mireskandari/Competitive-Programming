@@ -11,7 +11,7 @@ int sub(int a, int b) {
 	}
 	return a;
 }
- 
+
 int sum(int a, int b) {
 	a += b;
 	if (a >= MOD) {
@@ -19,18 +19,18 @@ int sum(int a, int b) {
 	}
 	return a;
 }
- 
+
 int mult(int a, int b) {
 	return 1ll * a * b % MOD;
 }
- 
+
 void add(int &a, int b) {
 	a += b;
 	if (a >= MOD) {
 		a -= MOD;
 	}
 }
- 
+
 int inv(int a) {
 	int res = 1, k = MOD - 2;
 	for (; k; k >>= 1, a = mult(a, a)) {
@@ -41,54 +41,52 @@ int inv(int a) {
 	return res;
 }
 
-constexpr int N = 15e4 + 10;
+constexpr int N = 15e4 + 10, SQ = 400;
 
-int tmp[N], up[N], inv_n, n, q, par[N], bigc[N], sz[N], tin[N], tout[N], timer;
+int n, q, par[N];
+vector<int> heavy_dude;
 vector<int> g[N];
+vector<pair<int, int>> guys[N];
 
-int dfs(int v) {
+int sz[N], tin[N], tout[N], timer;
+
+void dfs(int v, int p) {
+	par[v] = p;
 	tin[v] = timer++;
-	int res = 1, big = -1, bigs = 0;
+	guys[v].push_back({timer, v});
+	sz[v] = 1;
+	if ((int) g[v].size() >= SQ) {
+		heavy_dude.push_back(v);
+	}
 	for (auto &u : g[v]) {
-		if (u != par[v]) {
-			par[u] = v;
-			int szu = dfs(u);
-			res += szu;
-			if (szu > bigs) {
-				big = u;
-				bigs = szu;
-			}
+		if (u != p) {
+			dfs(u, v);
+			sz[v] += sz[u];
+			guys[v].push_back({timer, u});
 		}
 	}
-	sz[v] = res;
-	bigc[v] = big;
 	tout[v] = timer;
-	return res;
 }
 
-void decomp(int v, int l) {
-	up[v] = l;
-	if (bigc[v] != -1) {
-		decomp(bigc[v], l);
-	}
-	for (auto &u : g[v]) {
-		if (u != par[v] && u != bigc[v]) {
-			decomp(u, u);
-		}
-	}
+bool issub(int v, int p) {
+	return tin[p] <= tin[v] && tout[v] <= tout[p];
 }
 
-int fen[N];
+bool iscool(int v, int u) {
+	return issub(v, u) || issub(u, v);
+}
 
-void upd(int i, int x) {
+int a[N], fen[N];
+
+void update(int i, int x) {
 	for (++i; i < N; i += i & -i) {
 		add(fen[i], x);
 	}
 }
 
 void update(int l, int r, int x) {
-	upd(l, x);
-	upd(r, sub(0, x));
+	update(l, x);
+	update(r, sub(0, x));
 }
 
 int query(int i) {
@@ -102,9 +100,8 @@ int query(int i) {
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+		
 	cin >> n >> q;
-	inv_n = inv(n);
 	for (int i = 0; i < n - 1; ++i) {
 		int v, u;
 		cin >> v >> u;
@@ -113,35 +110,44 @@ int main() {
 		g[u].push_back(v);
 	}
 	
-	dfs(0);
-	decomp(0, 0);
+	int inv_n = inv(n);
 
+	dfs(0, -1);
+	
 	while (q--) {
-		int op, v;
-		cin >> op >> v;
+		int op;
+		cin >> op;
+		int v;
+		cin >> v;
 		--v;
 		if (op == 1) {
 			int d;
 			cin >> d;
-			
-			update(0, n, mult(d, sz[v]));
-			update(tin[v], tout[v], mult(d, sub(0, sz[v])));
-
-			if (bigc[v] != -1) {
-				update(tin[bigc[v]], tout[bigc[v]], mult(d, n - sz[bigc[v]]));
+			add(a[v], d);
+			if ((int) g[v].size() < SQ) {
+				int x = mult(d, mult(inv_n, sz[v]));
+				update(0, n, x);
+				update(tin[v], tout[v], sub(0, x));
+				for (auto &u : g[v]) {
+					if (u != par[v]) {
+						update(tin[u], tout[u], mult(d, mult(inv_n, n - sz[u])));
+					}
+				}
 			}
-			add(tmp[v], d);
 		} else {
-			int ans = sum(query(tin[v]), mult(n, tmp[v]));
-			//cerr << "INIT: " << v << ' ' << ans << '\n';
-			int u = up[v];
-			while (u != 0) {
-			//	cerr << v << ' ' << u << '\n';
-				add(ans, mult(tmp[par[u]], n - sz[u]));
-				u = up[par[u]];
-
+			int ans = sum(a[v], query(tin[v]));
+			for (auto &u : heavy_dude) {
+				if (u == v) {
+					continue;
+				}
+				if (!iscool(u, v) || issub(u, v)) {
+					add(ans, mult(a[u], mult(inv_n, sz[u])));
+				} else {
+					int x = lower_bound(guys[u].begin(), guys[u].end(), make_pair(tout[v], -1))->second;
+					add(ans, mult(a[u], mult(inv_n, n - sz[x])));
+				}
 			}
-			cout << mult(inv_n, ans) << '\n';
+			cout << ans << '\n';
 		}
 	}
 }
