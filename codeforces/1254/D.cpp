@@ -43,39 +43,39 @@ int inv(int a) {
 
 constexpr int N = 15e4 + 10;
 
-int n, q, inv_n, sz[N], tin[N], tout[N], timer, tmp[N], par[N];
+int tmp[N], up[N], inv_n, n, q, par[N], bigc[N], sz[N], tin[N], tout[N], timer;
 vector<int> g[N];
-vector<pair<int, int>> gg[N];
 
-void prep(int v) {
-	sz[v] = 1;
+int dfs(int v) {
+	tin[v] = timer++;
+	int res = 1, big = -1, bigs = 0;
 	for (auto &u : g[v]) {
 		if (u != par[v]) {
 			par[u] = v;
-			prep(u);
-			sz[v] += sz[u];
+			int szu = dfs(u);
+			res += szu;
+			if (szu > bigs) {
+				big = u;
+				bigs = szu;
+			}
 		}
 	}
+	sz[v] = res;
+	bigc[v] = big;
+	tout[v] = timer;
+	return res;
 }
 
-void dfs(int v) {
-	tin[v] = timer++;
-	if (v != 0) {
-		g[v].erase(find(g[v].begin(), g[v].end(), par[v]));
+void decomp(int v, int l) {
+	up[v] = l;
+	if (bigc[v] != -1) {
+		decomp(bigc[v], l);
 	}
-	sort(g[v].begin(), g[v].end(), [&](int ll, int rr) {
-		return sz[ll] < sz[rr];
-	});
-	for (int i = 0, j = 0; i < (int) g[v].size(); i = j) {
-		int u = g[v][i];
-		while (j < (int) g[v].size() && sz[g[v][j]] == sz[u]) {
-			dfs(g[v][j]);
-			++j;
+	for (auto &u : g[v]) {
+		if (u != par[v] && u != bigc[v]) {
+			decomp(u, u);
 		}
-		int x = g[v][j - 1];
-		gg[v].push_back({u, x});
 	}
-	tout[v] = timer;
 }
 
 int fen[N];
@@ -113,8 +113,8 @@ int main() {
 		g[u].push_back(v);
 	}
 	
-	prep(0);
 	dfs(0);
+	decomp(0, 0);
 
 	while (q--) {
 		int op, v;
@@ -126,13 +126,21 @@ int main() {
 			
 			update(0, n, mult(d, sz[v]));
 			update(tin[v], tout[v], mult(d, sub(0, sz[v])));
-			for (auto &p : gg[v]) {
-				int f = p.first, l = p.second;
-				update(tin[f], tout[l], mult(d, n - sz[f]));
+
+			if (bigc[v] != -1) {
+				update(tin[bigc[v]], tout[bigc[v]], mult(d, n - sz[bigc[v]]));
 			}
 			add(tmp[v], d);
 		} else {
 			int ans = sum(query(tin[v]), mult(n, tmp[v]));
+			//cerr << "INIT: " << v << ' ' << ans << '\n';
+			int u = up[v];
+			while (u != 0) {
+			//	cerr << v << ' ' << u << '\n';
+				add(ans, mult(tmp[par[u]], n - sz[u]));
+				u = up[par[u]];
+
+			}
 			cout << mult(inv_n, ans) << '\n';
 		}
 	}
