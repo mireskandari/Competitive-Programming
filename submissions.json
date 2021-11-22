@@ -17,6 +17,23 @@
     ],
     "timestamp": "Nov/19/2021 06:44"
   },
+  "CF136430856": {
+    "contest_id": 1612,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1612/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Special Permutation",
+    "problem_url": "https://codeforces.com/contest/1612/problem/B",
+    "submission_id": "CF136430856",
+    "submission_url": "https://codeforces.com/contest/1612/submission/136430856",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*900"
+    ],
+    "timestamp": "Nov/22/2021 04:50"
+  },
   "CF136438574": {
     "contest_id": 1612,
     "language": "C++17 (GCC 7-32)",
