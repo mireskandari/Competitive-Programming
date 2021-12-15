@@ -1,4 +1,21 @@
 {
+  "CF139432338": {
+    "contest_id": 526,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/526/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Transmitting Levels",
+    "problem_url": "https://codeforces.com/contest/526/problem/E",
+    "submission_id": "CF139432338",
+    "submission_url": "https://codeforces.com/contest/526/submission/139432338",
+    "tags": [
+      "dp",
+      "implementation",
+      "*2400"
+    ],
+    "timestamp": "Dec/15/2021 15:36"
+  },
   "CF139435264": {
     "contest_id": 406,
     "language": "C++17 (GCC 7-32)",
