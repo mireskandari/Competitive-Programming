@@ -1,4 +1,21 @@
 {
+  "CF140300053": {
+    "contest_id": 509,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/509/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Progress Monitoring",
+    "problem_url": "https://codeforces.com/contest/509/problem/F",
+    "submission_id": "CF140300053",
+    "submission_url": "https://codeforces.com/contest/509/submission/140300053",
+    "tags": [
+      "dp",
+      "trees",
+      "*2300"
+    ],
+    "timestamp": "Dec/22/2021 15:55"
+  },
   "CF141498613": {
     "contest_id": 1621,
     "language": "C++17 (GCC 7-32)",
