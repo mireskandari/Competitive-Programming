@@ -1,4 +1,22 @@
 {
+  "CF145328352": {
+    "contest_id": 786,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/786/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Legacy",
+    "problem_url": "https://codeforces.com/contest/786/problem/B",
+    "submission_id": "CF145328352",
+    "submission_url": "https://codeforces.com/contest/786/submission/145328352",
+    "tags": [
+      "data structures",
+      "graphs",
+      "shortest paths",
+      "*2300"
+    ],
+    "timestamp": "Feb/05/2022 15:26"
+  },
   "CF145990564": {
     "contest_id": 321,
     "language": "C++17 (GCC 7-32)",
