@@ -1,4 +1,22 @@
 {
+  "CF146171746": {
+    "contest_id": 961,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/961/G.cpp",
+    "platform": "Codeforces",
+    "problem_index": "G",
+    "problem_name": "Partitions",
+    "problem_url": "https://codeforces.com/contest/961/problem/G",
+    "submission_id": "CF146171746",
+    "submission_url": "https://codeforces.com/contest/961/submission/146171746",
+    "tags": [
+      "combinatorics",
+      "math",
+      "number theory",
+      "*2700"
+    ],
+    "timestamp": "Feb/12/2022 15:33"
+  },
   "CF146214711": {
     "contest_id": 1278,
     "language": "C++17 (GCC 7-32)",
