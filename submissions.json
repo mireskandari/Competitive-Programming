@@ -1,4 +1,22 @@
 {
+  "CF146170285": {
+    "contest_id": 932,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/932/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Team Work",
+    "problem_url": "https://codeforces.com/contest/932/problem/E",
+    "submission_id": "CF146170285",
+    "submission_url": "https://codeforces.com/contest/932/submission/146170285",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Feb/12/2022 15:10"
+  },
   "CF146171746": {
     "contest_id": 961,
     "language": "C++17 (GCC 7-32)",
