@@ -1,4 +1,23 @@
 {
+  "CF146921499": {
+    "contest_id": 914,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/914/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Palindromes in a Tree",
+    "problem_url": "https://codeforces.com/contest/914/problem/E",
+    "submission_id": "CF146921499",
+    "submission_url": "https://codeforces.com/contest/914/submission/146921499",
+    "tags": [
+      "bitmasks",
+      "data structures",
+      "divide and conquer",
+      "trees",
+      "*2400"
+    ],
+    "timestamp": "Feb/19/2022 05:45"
+  },
   "CF147179912": {
     "contest_id": 1387,
     "language": "C++17 (GCC 7-32)",
