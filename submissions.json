@@ -1,4 +1,20 @@
 {
+  "CF147421305": {
+    "contest_id": 1642,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/1642/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Power Walking",
+    "problem_url": "https://codeforces.com/contest/1642/problem/B",
+    "submission_id": "CF147421305",
+    "submission_url": "https://codeforces.com/contest/1642/submission/147421305",
+    "tags": [
+      "greedy",
+      "*900"
+    ],
+    "timestamp": "Feb/23/2022 05:26"
+  },
   "CF147427626": {
     "contest_id": 1642,
     "language": "C++17 (GCC 7-32)",
