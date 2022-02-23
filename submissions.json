@@ -1,4 +1,22 @@
 {
+  "CF147492092": {
+    "contest_id": 873,
+    "language": "C++17 (GCC 7-32)",
+    "path": "codeforces/873/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Forbidden Indices",
+    "problem_url": "https://codeforces.com/contest/873/problem/F",
+    "submission_id": "CF147492092",
+    "submission_url": "https://codeforces.com/contest/873/submission/147492092",
+    "tags": [
+      "dsu",
+      "string suffix structures",
+      "strings",
+      "*2400"
+    ],
+    "timestamp": "Feb/23/2022 10:59"
+  },
   "CF147493615": {
     "contest_id": 802,
     "language": "C++17 (GCC 7-32)",
