@@ -1,4 +1,21 @@
 {
+  "CF149029972": {
+    "contest_id": 521,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/521/E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Cycling City",
+    "problem_url": "https://codeforces.com/contest/521/problem/E",
+    "submission_id": "CF149029972",
+    "submission_url": "https://codeforces.com/contest/521/submission/149029972",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*3100"
+    ],
+    "timestamp": "Mar/09/2022 16:07"
+  },
   "CF149092283": {
     "contest_id": 1651,
     "language": "C++17 (GCC 9-64)",
