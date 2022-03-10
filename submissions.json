@@ -1,4 +1,23 @@
 {
+  "CF149186883": {
+    "contest_id": 1006,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1006/F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Xor-Paths",
+    "problem_url": "https://codeforces.com/contest/1006/problem/F",
+    "submission_id": "CF149186883",
+    "submission_url": "https://codeforces.com/contest/1006/submission/149186883",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dp",
+      "meet-in-the-middle",
+      "*2100"
+    ],
+    "timestamp": "Mar/10/2022 14:20"
+  },
   "CF149189314": {
     "contest_id": 204,
     "language": "C++17 (GCC 9-64)",
