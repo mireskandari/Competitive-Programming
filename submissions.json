@@ -1,4 +1,20 @@
 {
+  "CF154844652": {
+    "contest_id": 1662,
+    "language": "C++20 (GCC 11-64)",
+    "path": "codeforces/1662/H.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H",
+    "problem_name": "Boundary",
+    "problem_url": "https://codeforces.com/contest/1662/problem/H",
+    "submission_id": "CF154844652",
+    "submission_url": "https://codeforces.com/contest/1662/submission/154844652",
+    "tags": [
+      "brute force",
+      "math"
+    ],
+    "timestamp": "Apr/24/2022 07:40"
+  },
   "CF154845475": {
     "contest_id": 1662,
     "language": "C++20 (GCC 11-64)",
