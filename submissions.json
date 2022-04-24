@@ -1,4 +1,19 @@
 {
+  "CF154845475": {
+    "contest_id": 1662,
+    "language": "C++20 (GCC 11-64)",
+    "path": "codeforces/1662/M.cpp",
+    "platform": "Codeforces",
+    "problem_index": "M",
+    "problem_name": "Bottle Arrangements",
+    "problem_url": "https://codeforces.com/contest/1662/problem/M",
+    "submission_id": "CF154845475",
+    "submission_url": "https://codeforces.com/contest/1662/submission/154845475",
+    "tags": [
+      "constructive algorithms"
+    ],
+    "timestamp": "Apr/24/2022 07:47"
+  },
   "CF154846530": {
     "contest_id": 1662,
     "language": "C++17 (GCC 9-64)",
