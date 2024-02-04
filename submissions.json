@@ -1,0 +1,21 @@
+{
+  "CF244763022": {
+    "contest_id": 1924,
+    "language": "C++17 (GCC 9-64)",
+    "path": "codeforces/1924/B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Space Harbour",
+    "problem_url": "https://codeforces.com/contest/1924/problem/B",
+    "submission_id": "CF244763022",
+    "submission_url": "https://codeforces.com/contest/1924/submission/244763022",
+    "tags": [
+      "data structures",
+      "implementation",
+      "math",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Feb/03/2024 19:13"
+  }
+}
