@@ -5,7 +5,7 @@ Submissions
 ## Introduction
 
 A repository to keep track of problem solving practice, containing solutions from platforms:
-* Codeforces (my account: [flyingspoon](https://codeforces.com/profile/retired_account), my old permanently inactive account: [retired_account](https://codeforces.com/profile/retired_account))
+* Codeforces (my only active account: [flyingspoon](https://codeforces.com/profile/retired_account), also my old permanently inactive account: [retired_account](https://codeforces.com/profile/retired_account))
 
 
 ## Contents
