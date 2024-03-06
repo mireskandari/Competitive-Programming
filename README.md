@@ -5,7 +5,7 @@ Submissions
 ## Introduction
 
 A repository to keep track of problem solving practice, containing solutions from platforms:
-* Codeforces &nbsp; [![Codeforces](https://run.kaist.ac.kr/badges/codeforces/retired_account.svg)](https://codeforces.com/profile/retired_account)
+* Codeforces (my account: [flyingspoon](https://codeforces.com/profile/retired_account), my old permanently inactive account: [retired_account](https://codeforces.com/profile/retired_account))
 
 
 ## Contents
